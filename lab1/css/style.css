@@ -1,6 +1,12 @@
   body {
-    margin: 50px;
-    width: 50%;
+    background-color: lightgrey;
+    margin: 5px;
+  }
+  .wrapper {
+    padding: 50px;
+    width: 33%;
+    margin: 0 auto;
+    background-color: white;
   }
   p, li {
     font-size: 22px;
