@@ -79,3 +79,6 @@ footer ul li {
 footer ul li:last-child {
   float: right;
 }
+footer ul li:hover {
+  text-decoration: underline;
+}
