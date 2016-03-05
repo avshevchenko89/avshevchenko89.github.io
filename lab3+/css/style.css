@@ -1,0 +1,43 @@
+body {
+  background: #6c6c6c;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 960px;
+  padding: 50px;
+  background: url('../img/background.jpg');
+}
+.logo {
+  padding: 0px;
+  float: left;
+}
+.contacts {
+  float: right;
+  margin-top: 90px;
+  margin-right: 50px;
+  font-size: 10px;
+  font-family: "Tahoma";
+  color: rgb(230, 230, 230);
+  line-height: 1.2;
+  text-align: left;
+}
+.contries {
+  clear: both;
+  margin: 0 auto;
+}
+td {
+  margin: 15px 15px 50px;
+  width: 330px;
+  height: 225px;
+  text-align: center;
+  color: white;
+  font-family: "Tahoma";
+  font-size: 18px;
+}
+footer {
+  margin-top: 180px;
+  text-align: center;
+  color: white;
+  font-family: "Tahoma";
+  font-size: 12px;
+}
