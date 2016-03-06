@@ -11,8 +11,9 @@ body {
 }
 .logo {
   color: #333333;
-  font-family: Verdana;
+  font-family: "Tahoma";
   font-size: 36px;
+  line-height: 1.2;
 }
 .logo:first-letter {
   color: #242424;
@@ -30,7 +31,8 @@ menu ul li {
   position: relative;
   color: white;
   font-size: 15px;
-  font-family: Verdana;
+  font-family: "Tahoma";
+  line-height: 1.2;
 }
 menu ul li:nth-child(2) {
   padding: 13px 25px 15px 25px;
@@ -46,25 +48,34 @@ menu ul li:nth-child(3) {
 }
 .left_menu ul li {
   padding: 15px 20px;
-  border: 1px solid grey;
+  border: 1px solid #c8c8c8;
   font-size: 13px;
-  font-family: Verdana;
+  font-family: "Tahoma";
+  line-height: 1.2;
 }
 .left_menu ul li:nth-child(3) {
   padding-left: 40px;
   background-color: #f9f9f9;
 }
-img {
+.photo {
+  float: right;
+  padding: 50px 150px;
   margin: 0 auto 40px 50px;
+  border:1px solid #c8c8c8;
+  text-align: center;
+  overflow: hidden;
 }
 p {
-  margin-left: 330px;
+  float:right;
+  width: 790px;
   margin-bottom: 40px;
   padding: 0 25px;
-  font-size: 13px;
-  font-family: Verdana;
+  font-size: 14px;
+  font-family: "Tahoma";
+  line-height: 1.2;
 }
 footer {
+  clear: both;
   background-color: rgb(225, 225, 225);
   ;
   margin-bottom: 30px;
@@ -73,8 +84,9 @@ footer ul li {
   padding: 15px;
   display: inline-block;
   position: relative;
-  font-family: Verdana;
+  font-family: "Tahoma";
   font-size: 13px;
+  line-height: 1.2;
 }
 footer ul li:last-child {
   float: right;
