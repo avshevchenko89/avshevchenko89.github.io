@@ -42,6 +42,7 @@ body {
   color: #128aa7;
 }
 .main_picture {
+  display: block;
   border: 1px solid #128aa7;
 }
 .menu-block {
