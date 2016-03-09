@@ -2,6 +2,11 @@ body {
   background: #f9f9f9;
   ;
 }
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
 .wrapper {
   margin: 0 auto 0 150px;
   padding: 50px;
@@ -20,77 +25,86 @@ body {
   font-weight: bold;
   font-size: 40px;
 }
-menu {
+.menu {
   margin: 40px 0px;
-  background: #515151;
-  ;
+  background-color: #515151;
+  width: 1150px;
 }
-menu ul li {
-  padding: 13px 50px 15px 20px;
-  display: inline-block;
-  position: relative;
+.menu li {
+  float: left;
+  padding: 15px;
+  width: 120px;
+  text-align: center;
   color: white;
   font-size: 15px;
   font-family: "Tahoma";
   line-height: 1.2;
 }
-menu ul li:nth-child(2) {
-  padding: 13px 25px 15px 25px;
+.menu li:hover {
   border: 1px solid #838383;
   background: #373737;
-}
-menu ul li:nth-child(3) {
-  padding-left: 85px;
 }
 .left_menu {
   float: left;
   width: 280px;
 }
-.left_menu ul li {
-  padding: 15px 20px;
+.left_menu li {
   border: 1px solid #c8c8c8;
+}
+.left_menu li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #656363;
   font-size: 13px;
   font-family: "Tahoma";
   line-height: 1.2;
 }
-.left_menu ul li:nth-child(3) {
-  padding-left: 40px;
+.left_menu li a:hover {
+  padding-left: 50px;
   background-color: #f9f9f9;
+  color: #2c2c2c;
+}
+.content {
+  float: right;
+  margin-left: 40px;
 }
 .photo {
-  float: right;
   padding: 50px 150px;
-  margin: 0 auto 40px 50px;
+  margin-bottom: 40px;
   border:1px solid #c8c8c8;
   text-align: center;
   overflow: hidden;
 }
-p {
-  float:right;
+.content p {
   width: 790px;
-  margin-bottom: 40px;
-  padding: 0 25px;
+  margin: 50px 20px;
+  padding: 0;
   font-size: 14px;
   font-family: "Tahoma";
   line-height: 1.2;
 }
-footer {
-  clear: both;
-  background-color: rgb(225, 225, 225);
-  ;
-  margin-bottom: 30px;
+.footer {
+  background-color: #e1e1e1;
+  width: 100%;
 }
-footer ul li {
-  padding: 15px;
-  display: inline-block;
-  position: relative;
+.footer li {
+  float: left;
+  width: 120px;
+}
+.footer li a{
+  float: left;
+  display: block;
+  padding: 20px;
+  color: #2c2c2c;
   font-family: "Tahoma";
   font-size: 13px;
-  line-height: 1.2;
+  text-decoration: none;
 }
-footer ul li:last-child {
+.footer li:last-child {
   float: right;
+  width: 200px;
 }
-footer ul li:hover {
+.footer li a:hover {
   text-decoration: underline;
 }
