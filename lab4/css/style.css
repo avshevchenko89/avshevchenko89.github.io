@@ -2,7 +2,8 @@ body {
   background: url('../img/background.jpg');
 }
 .wrapper {
-  margin-left: 150px;
+  margin:0 auto;
+  padding-top: 44px;
   width: 1000px;
   background-color: white;
 }
@@ -16,6 +17,7 @@ body {
 }
 .logo p {
   margin-top: -80px;
+  margin-bottom: 60px;
   color: #128aa7;
   font-size: 12px;
   font-family: "Tahoma";
@@ -26,14 +28,17 @@ body {
   margin-right: 25px;
 }
 .contacts {
-  margin-left: 185px;
-  padding: 25px;
+  float: right;
+  padding: 25px 0 25px 25px;
   color: #128aa7;
   font-size: 12px;
   font-family: "Tahoma";
 }
+.countries {
+  clear: both;
+}
 .countries li {
-  float: right;
+  float: left;
   margin: 0 auto;
   text-align: center;
   font-size: 10px;
