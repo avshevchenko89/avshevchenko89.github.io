@@ -8,7 +8,7 @@ body {
   display: block;
 }
 .wrapper {
-  margin: 0 auto 0 150px;
+  margin: 0 auto;
   padding: 50px;
   width: 1150px;
   height: 900px;
