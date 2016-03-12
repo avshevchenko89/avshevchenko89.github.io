@@ -2,8 +2,7 @@ body {
   background: url('../img/background.jpg');
 }
 .wrapper {
-  margin:0 auto;
-  padding-top: 44px;
+  margin-left: 150px;
   width: 1000px;
   background-color: white;
 }
@@ -14,10 +13,11 @@ body {
 }
 .logo {
   float: left;
+  /--display: block;
+  margin: 0 auto;
 }
 .logo p {
   margin-top: -80px;
-  margin-bottom: 60px;
   color: #128aa7;
   font-size: 12px;
   font-family: "Tahoma";
@@ -26,27 +26,25 @@ body {
 .container {
   float: right;
   margin-right: 25px;
+  margin-bottom: 10px;
 }
 .contacts {
-  float: right;
-  padding: 25px 0 25px 25px;
+  margin-left: 185px;
+  padding: 25px;
   color: #128aa7;
   font-size: 12px;
   font-family: "Tahoma";
 }
-.countries {
-  clear: both;
-}
 .countries li {
-  float: left;
+  float: right;
   margin: 0 auto;
   text-align: center;
   font-size: 10px;
   font-family: "Tahoma";
+  text-decoration: underline;
   color: #128aa7;
 }
 .main_picture {
-  display: block;
   border: 1px solid #128aa7;
 }
 .menu-block {
@@ -106,13 +104,13 @@ body {
   width: 20%;
   float: left;
   background-color: #edeef0;
-  padding-left: 15px;
   padding-bottom: 20000px;
   margin-bottom: -20000px;
   font-size: 14px;
   color: #424c43;
   line-height: 1.7;
-  font-family: "Tahoma"
+  font-family: "Tahoma";
+  text-align: center;
 }
 h3 {
   font-size: 18px;
@@ -131,13 +129,13 @@ h3 {
   width: 20%;
   float: right;
   background-color: #edeef0;
-  padding-left: 15px;
   padding-bottom: 20000px;
   margin-bottom: -20000px;
   font-size: 14px;
   color: #424c43;
   line-height: 1.7;
-  font-family: "Tahoma"
+  font-family: "Tahoma";
+  text-align: center;
 }
 .footer {
   padding: 5px;
