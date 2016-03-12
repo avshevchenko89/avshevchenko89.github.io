@@ -13,7 +13,7 @@ body {
 }
 .logo {
   float: left;
-  /--display: block;
+  display: block;
   margin: 0 auto;
 }
 .logo p {
