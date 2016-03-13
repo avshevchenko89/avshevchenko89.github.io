@@ -13,12 +13,12 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 }
 .header {
-  padding-top: 13px;
+  padding-top: 14px;
 }
 .logo {
   float: left;
   display: block;
-  margin-left: 30px;
+  margin-left: 20px;
   margin-top: 25px;
 }
 .logo p {
@@ -30,12 +30,12 @@ body {
 }
 .container {
   float: right;
-  margin-right: 30px;
-  margin-bottom: 15px;
+  padding-right: 30px;
+  padding-bottom: 13px;
 }
 .contacts {
   float:right;
-  padding-bottom: 37px;
+  padding-bottom: 40px;
 }
 .contacts li {
   color: #128aa7;
