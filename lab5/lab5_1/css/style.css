@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/helveticaneue-thin-webfont.eot');
+  src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'), url('../fonts/helveticaneue-thin-webfont.woff') format('woff'), url('../fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/helveticaneue-thin-webfont.eot');
+  src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'), url('../fonts/helveticaneue-thin-webfont.woff') format('woff'), url('../fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+clearfix:after {
+  content: '';
+  clear: both;
+  position: relative;
+}
+.bold {
+  font-weight: bold;
+}
+.udrl {
+  text-decoration: underline;
+}
+body {
+  font-family: "Helvetica Neue", Tahoma;
+}
+.nav {
+  background: url('../img/nav.png');
+  height: 35px;
+  width: 100%;
+}
+.menu {
+  float: right;
+  display: block;
+}
+.menu li {
+  float: left;
+}
+.menu li a {
+  float: left;
+  padding: 10px;
+  color: #60b5ed;
+  font-size: 14px;
+  text-decoration: none;
+}
+.menu li a:hover {
+  font-weight: bold;
+  background-color: #4eabda;
+  color: white;
+}
+.container {
+  float: right;
+  display: block;
+  z-index: 1;
+}
+.container li {
+  float: left;
+}
+.container li a {
+  float: left;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+#flag {
+  border-left: 1px solid #56a2dc;
+  height: 35px;
+}
+#flag a{
+  padding: 3px 0 3px 15px;
+}
+.grad {
+  background: linear-gradient(to bottom, #51b1dc, #2e7ac4);
+}
+.wrapper {
+  display: block;
+  background: url('../img/pic.jpg') no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-top: 214px;
+  padding-bottom: 214px;
+}
+.form {
+  margin: auto;
+  display: block;
+  text-align: center;
+  width: 550px;
+  background-color: rgba(16, 16, 16, 0.75);
+}
+.header {
+  padding: 20px;
+  border-bottom: 2px solid #c4c6b8;
+  font-size: 24px;
+  color: white;
+}
+.button {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+button {
+  width: 285px;
+  border-radius: 5px;
+  margin: 10px;
+  background: linear-gradient(to bottom, #7789b7, #2e4476);
+  border-color: #7586b1;
+}
+button li {
+  float: left;
+  padding: 5px 7px;
+  font-size: 14px;
+  color: white;
+}
+button li:first-child {
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+}
+button li:last-child {
+  border-left: 1px solid #7586b1;
+  padding: 10px 33px;
+}
+.line {
+  color: #999999;
+  font-size: 14px;
+}
+.line:after {
+  display: inline-block;
+  margin-bottom: 4px;
+  content: " ";
+  width: 122px;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #000000;
+}
+.line:before {
+  display: inline-block;
+  margin-bottom: 4px;
+  content: " ";
+  width: 122px;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #000000;
+}
+.content {
+  margin-top: 25px;
+}
+.content input {
+  padding: 5px 10px;
+  width: 255px;
+  height: 25px;
+  margin: 10px;
+  background: #0f0e0e;
+  color: #cccccc;
+  font-size: 14px;
+  border: 1px solid #000000;
+  border-bottom-color: #4a4a49;
+}
+.content input:hover {
+  background: #1b5288;
+  box-shadow: 2px -2px 20px #1b5288, -2px 2px 20px #1b5288;
+}
+.checkbox {
+  margin: 10px;
+  font-size: 14px;
+  color: #cccccc;
+}
+.submit {
+  margin: 25px;
+}
+.submit input {
+  padding: 10px;
+  border-radius: 3px;
+  border-color: #6bb8e7;
+  background: linear-gradient(to bottom, #6bb8e7, #3686ca);
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: bold;
+}
+.form p {
+  font-size: 11px;
+  color: #cccccc;
+  padding-bottom: 20px;
+}
