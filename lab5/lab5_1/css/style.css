@@ -158,7 +158,7 @@ button li:last-child {
   border: 1px solid #000000;
   border-bottom-color: #4a4a49;
 }
-.content input:hover {
+.content input:focus {
   background: #1b5288;
   box-shadow: 2px -2px 20px #1b5288, -2px 2px 20px #1b5288;
 }
