@@ -224,31 +224,33 @@ main {
   height: 625px;
 }
 .main_capt {
-display: inline-block;
 padding: 1px 3px;
-margin: 5px -3px 12px;
-width:175px;
+margin: 2px -3px 13px;
+width:173px;
 height: 23px;
 border: 1px solid #8b979c;
 box-shadow: 0px 3px 3px 0px #8b979c;
 border-radius: 20px;
 }
 .main_capt span {
+  display: block;
+  margin: -23px 0 0 24px;
   font-size: 13px;
   text-transform: uppercase;
   color: #114165;
   font-family: "Lucida Sans Unicode Regular", sans-serif;
   }
 .next_capt {
-  display: inline-block;
   padding: 2px 3px;
-  margin: 0;
+  margin: 1px 0;
   width: 142px;
   height: 22px;
   border: 1px solid #79878d;
   border-radius: 15px;
 }
 .next_capt span {
+  display: block;
+  margin: -23px 0 0 26px;
   font-size: 14px;
   text-transform: uppercase;
   color: #114165;
@@ -297,7 +299,7 @@ border-radius: 20px;
 .line {
   display: inline-block;
   clear: both;
-  margin: 1px 7px -10px;
+  margin: 0px 7px -11px;
 }
 .line figure {
   display: block;
@@ -358,13 +360,15 @@ margin-left: 6px;
   border-radius: 15px;
 }
 .sec_capt span {
+  display: block;
+  margin: -22px 0 0 28px;
   font-size: 14px;
   text-transform: uppercase;
   color: #114165;
   font-family: "Lucida Sans Unicode Regular", sans-serif;
 }
 .brend form {
-  margin: 1px 0 0 22px;
+  margin: 3px 0 0 22px;
 }
 .brend form label {
   font-family: "Lucida Sans Unicode Regular", sans-serif;
@@ -373,7 +377,8 @@ margin-left: 6px;
   line-height: 2;
 }
 .brend form div:last-child {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  margin-top: -2px;
 }
 .brend form button {
   margin: 15px 0 0 -1px;
