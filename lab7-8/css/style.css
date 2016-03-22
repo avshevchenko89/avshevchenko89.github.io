@@ -240,6 +240,7 @@ word-wrap: break-word;
   float: left;
   display: block;
   padding: 3% 2% 6% 6.5%;
+  margin-right: 6.5%;
   width: 38%;
   background: url('../img/news.png') 0 0 no-repeat;
   background-size: 100%;
@@ -266,7 +267,7 @@ word-wrap: break-word;
   text-align: left;
 }
 .updates {
-  float: right;
+  clear: right;
   position: relative;
   overflow: hidden;
   margin-top: 3%;
@@ -332,7 +333,8 @@ word-wrap: break-word;
   background-position: 0 -97px;
 }
 .info__slider {
-  clear: both;
+  float: left;
+  clear: left;
   margin:0.3% 20.5%;
 }
 .info__logos {
