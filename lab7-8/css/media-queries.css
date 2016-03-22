@@ -1,0 +1,136 @@
+@media (min-width:768px) and (max-width:959px) {
+header {
+  height: 229px;
+}
+  nav {
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .menu {
+    margin: 4% 0;
+  }
+  .menu__item {
+    padding-left: 0;
+    padding-right: 6.7%;
+  }
+.slider__item {
+  padding-left: 3%;
+  padding-top: 3.5%;
+  width: 35%;
+}
+.slider__item__title {
+  font-size: 48px;
+  line-height: 1.3;
+}
+.slider__item--second__title {
+  font-size: 24px;
+  height: 30px;
+  overflow: hidden;
+}
+.slider__item__text {
+  height: 100px;
+  overflow: hidden;
+  font-size: 16px;
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+.slider__img {
+  margin-right: 9%;
+  margin-top: -3%;
+}
+.slider__slider-img {
+  margin-top: 3.5%;
+  margin-right: 21%;
+  margin-bottom: 13%;
+}
+.about {
+  margin-top: 61px;
+}
+.container__item:nth-child(2) {
+  padding-left: 1%;
+
+}
+.content {
+  width: 60%;
+  margin-top: 6%;
+  margin-left: 6%;
+}
+.content__name {
+  font-size: 24px;
+}
+.content__text {
+  font-size: 16px;
+  height: 148px;
+  overflow: hidden;
+}
+.info-box {
+  height: 605px;
+}
+.news {
+  width: 35%;
+  background-size: 133%;
+}
+.news__content {
+  padding-left: 5%;
+  padding-top: 1%;
+}
+.news__title {
+  font-size: 24px;
+}
+.news__title--color {
+  display: block;
+  margin-left: 0;
+}
+.news__text {
+  width:100%;
+  margin-top: 4%;
+  height: 146px;
+  overflow: hidden;
+}
+.updates {
+  width: 49%;
+  margin-top: 3.5%;
+}
+.updates__item {
+  margin: 3.7% 0 22% 1%;
+}
+.updates__item:last-child {
+  margin-top: 40%;
+}
+.updates__item__text {
+  margin-left: 4.5%;
+  width:72%;
+  height: 20px;
+  line-height: 1.2;
+  overflow: hidden;
+}
+.updates__item__text--bold {
+  line-height: 1;
+}
+.updates__link {
+  padding-right: 8%;
+}
+.info__slider {
+  margin: 2% 18%;
+}
+.info__logos {
+  margin-top: 53px;
+  height: 120px;
+  padding: 0;
+}
+.info__logos__img {
+  padding: 3.5% 6.5% 3.5% 0;
+}
+.info__logos__img:nth-child(4) {
+  padding-left: 1%;
+  padding-right: 5.1%;
+}
+.info__logos__img:nth-child(5) {
+  padding-right: 7%;
+}
+.info__logos__img:last-child {
+  padding-right: 0;
+}
+
+}
