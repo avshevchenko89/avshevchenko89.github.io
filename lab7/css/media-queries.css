@@ -1,0 +1,163 @@
+@media (min-width:480px) and (max-width:767px) {
+  header {
+    height: 138px;
+  }
+  .slider-box {
+    height: 344px;
+  }
+  .slider {
+    height: 245px;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding-top: 0;
+  }
+  .slider__item {
+    float: left;
+    padding-left: 8%;
+    padding-top: 91px;
+    width: 42%;
+  }
+  .slider__item__title {
+    letter-spacing: 0;
+  }
+  .slider__img {
+    display: block;
+    float: right;
+    width: 40%;
+    margin-top: -10px;
+    padding-right: 6.5%;
+  }
+  .slider__slider-img {
+    width: 18%;
+    position: relative;
+    margin-left: 42%;
+    padding-left: 0;
+    padding-top: 22px;
+  }
+  .about {
+    padding-top: 60px;
+  }
+  .container__item:last-child {
+    padding-top: 4px;
+  }
+  .content {
+    width: 80.5%;
+  }
+  .news {
+    width: 92%;
+    background-size: 103%;
+  }
+  .news__content {
+    padding-top: 27px;
+    padding-bottom: 26px;
+    padding-left: 63px;
+  }
+  .news__title {
+    font-size: 30px;
+    display: inline-block;
+  }
+  .news__title--color {
+    padding-left: 5px;
+  }
+  .news__text {
+    padding-top: 15px;
+    padding-left: 0;
+    width: 95%;
+  }
+  .info__slider {
+    width: 18%;
+    padding-top: 24px;
+    padding-left: 14px;
+  }
+  .updates {
+    padding-left: 13.5%;
+    width: 79%;
+  }
+  .updates__item:last-child {
+    padding-top: 21px;
+  }
+  .updates__item__text--bold {
+    width: 100%;
+  }
+  .updates__link {
+    padding-top: 18px;
+    padding-right: 24px;
+  }
+  .logos {
+    padding-bottom: 38px;
+  }
+  .logos__img:first-child {
+    padding-top: 35px;
+    padding-right: 11%;
+    padding-left: 17%;
+  }
+  .logos__img:nth-child(3) {
+    padding-top: 0;
+    padding-left: 10%;
+  }
+  .logos__img:nth-child(4) {
+    padding-top: 21px;
+    padding-left: 13%;
+  }
+  .logos__img:nth-child(5) {
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 9%;
+  }
+  .logos__img:last-child {
+    padding-top: 0;
+    padding-left: 10%;
+  }
+  .footer-box {
+    display: block;
+    height: 668px;
+  }
+  .footer {
+    padding-left: 18px;
+    padding-top: 79px;
+  }
+  .list__item {
+    width: 95%;
+    height: 133px;
+    overflow: hidden;
+    padding-bottom: 53px;
+  }
+  .list__content {
+    height: 133px;
+    overflow: hidden;
+  }
+  .list__title {
+    font-size: 24px;
+  }
+  .list__text {
+    font-size: 16px;
+  }
+  .list__text--italic {
+    font-size: 14px;
+  }
+  .footer__menu {
+    display: block;
+  }
+  .menu--footer {
+    display: block;
+    width: 100%;
+    padding-top: 45px;
+    padding-left: 21px;
+  }
+  .menu__item--footer {
+    float: left;
+    list-style: none;
+    padding-right: 5.1%;
+    padding-left: 0;
+  }
+  .menu__link--footer {
+    font-size: 20px;
+  }
+  .footer__item {
+    display: block;
+    text-align: left;
+    width: 29%;
+    padding-top: 58px;
+  }
+
+}
