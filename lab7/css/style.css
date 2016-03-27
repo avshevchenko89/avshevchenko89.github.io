@@ -22,7 +22,6 @@
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  /*width: 480px;*/
   min-width: 320px;
   height: inherit;
   position: relative;
@@ -75,7 +74,6 @@ nav {
 .menu__item {
   float: left;
   list-style: none;
-  padding: 0 0 0 7.5%;
 }
 .menu__link {
   text-align: right;
@@ -194,6 +192,11 @@ nav {
 }
 .slider__item__text {
   display: none;
+  font-family: "OpenSans Light", Arial, sans-serif;
+  color: #fff;
+  text-align: left;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.05px;
 }
 .slider__img {
   display: none;
@@ -203,7 +206,7 @@ nav {
   margin: 0 auto;
   padding-top: 78px;
   padding-left: 10px;
-  width: 25%;
+  width: 80px;
 }
 .about-box {
   clear: both;
@@ -239,7 +242,7 @@ nav {
 }
 .cloud {
   background-position: -28px 0;
-  margin: 18px 5px;
+  margin: 18px 10px;
 }
 .music {
   background-position: -61px 0;
@@ -296,12 +299,12 @@ nav {
   height: inherit;
   background-color: #f9f9f9;
   width: 100%;
+  border-top: 1px solid #e6e6e6;
 }
 .info {
   margin: 0 auto;
   padding-top: 71px;
   max-width: 960px;
-  border-bottom: 1px solid #e6e6e6;
 }
 .news {
   margin: 0 auto;
@@ -340,7 +343,7 @@ nav {
 }
 .info__slider {
   display: block;
-  width: 27%;
+  width: 86px;
   margin: 0 auto;
   padding-top: 23px;
   padding-left: 45px;
@@ -425,8 +428,14 @@ nav {
 .third {
   background-position: 0 -97px;
 }
+.logos-box {
+  width: 100%;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e6e6e6;
+}
 .logos {
   width: 100%;
+  max-width: 960px;
   margin: 0 auto;
   padding-bottom: 71px;
 }
@@ -479,7 +488,7 @@ nav {
   color: #b9b9b9;
 }
 .list__text--italic {
-  line-height: 1.2;
+  line-height: 1.4;
   font-family: Georgia, serif;
   font-style: italic;
   color: #c5c5c5;
