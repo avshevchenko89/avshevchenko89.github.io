@@ -389,7 +389,7 @@
     clear: none;
     float: right;
     width: 67%;
-    width: 68%;
+    /*width: 68%;*/
   }
   .menu {
     display: block;
