@@ -15,6 +15,8 @@ header {
 .telephone {
   float: left;
   display: block;
+  margin-top: -1px;
+  margin-left: 1px;
 }
 .telephone ul {
   margin-left: -1px;
@@ -44,7 +46,7 @@ header {
   margin-top: -2px;
   padding-top: 2px;
   padding-bottom: 2px;
-  padding-right: 2px;
+  padding-right: 1px;
   padding-left: 5px;
   height: 22px;
   border-radius: 5px;
@@ -54,11 +56,31 @@ header {
 .avtoriz li {
   float: left;
   list-style: none;
-  padding: 2px;
+  padding: 1px 2px 2px 2px;
+}
+.avtoriz li:first-child {
+  padding: 3px 2px;
+}
+.avtoriz li:nth-child(3) {
+  padding: 5px 2px 0px 5px;
+}
+.avtoriz li:nth-child(3) a {
+  padding: 0 6px 0 0;
+  border-right: 1px solid #fff;
+}
+.avtoriz li:last-child {
+  padding: 1px 7px 0 17px;
+}
+.avtoriz li:last-child>a {
+  padding: 0px;
+  line-height: 1.5;
+  border-bottom: 1px solid #bfbfbf;
+  color: #bfbfbf;
+  letter-spacing: 1.1px;
 }
 .avtoriz a {
   display: block;
-  padding: 3px 0px;
+  padding: 4px 0px;
   font-size: 11px;
   font-family: "Lucida Sans Unicode Regular", sans-serif;
   color: #fff;
@@ -74,20 +96,12 @@ header {
   padding: 0px 5px 0px 4px;
   line-height: 0.9;
 }
-.avtoriz li:last-child>a {
-  padding: 0px 5px 0px 15px;
-  line-height: 1.8;
-  text-decoration: underline;
-  color: #bfbfbf;
-  letter-spacing: 1.1px;
-}
-.avtoriz li:nth-child(3) a {
-  border-right: 1px solid #fff;
-  padding: 3px 4px 0px 5px;
+.avtoriz input:first-child {
+  padding: 0px 6px 0px 3px;
 }
 nav {
   float: left;
-  margin: 1px 0px 0px 16px;
+  margin: -1px 0px 0px 18px;
   padding: 1px 8px 1px 5px;
   border-radius: 10px;
   border-color: #c1c8cb;
@@ -99,7 +113,7 @@ nav li {
 }
 menu {
   margin-top: 3px;
-  margin-bottom: 1px;
+  margin-bottom: -2px;
   width: 908px;
   height: 31px;
   border-radius: 4px;
@@ -117,6 +131,18 @@ menu {
   margin: 1px 0px 0px 0px;
   padding: 7px 18px 5px 16px;
 }
+.menu li:nth-child(2) {
+  padding: 7px 16px 5px 17px;
+}
+.menu li:nth-child(2) a {
+  letter-spacing: 0.3px;
+}
+.menu li:nth-child(4) {
+  padding-left: 12px;
+}
+.menu li:last-child {
+  padding-left: 7px;
+}
 .menu a {
   text-transform: uppercase;
   text-decoration: none;
@@ -132,12 +158,6 @@ menu {
 .menu a:hover {
   color: #fff;
 }
-.menu li:nth-child(4) {
-  padding-left: 13px;
-}
-.menu li:last-child {
-  padding-left: 6px;
-}
 .korzina {
   float: right;
   margin: 5px 9px 0 0;
@@ -152,16 +172,21 @@ menu {
   text-align: left;
 }
 .korzina li:first-child {
-  padding-top: 3px;
+  padding-top: 1px;
+  padding-right: 6px;
+}
+.korzina li:nth-child(2) {
+    padding-right: 2px;
 }
 .korzina li:nth-child(3) {
-  padding: 5px 5px 0 0;
+  padding: 3px 5px 0 0;
   margin-right: 9px;
   color: #0d5a8f;
 }
 .korzina li:last-child {
   color: #0d5a8f;
-  margin-left: 9px;
+  padding-right: 5px;
+  padding-left: 8px;
 }
 .find_auto {
   float: left;
@@ -236,13 +261,13 @@ menu {
   box-shadow: 0px 5px 5px 0px #a4a4a4;
 }
 main {
-  margin-top: 15px;
+  margin-top: 16px;
   width: 1000px;
   height: 625px;
 }
 .main_capt1 {
-padding: 1px 3px;
-margin: 2px -3px 13px;
+padding: 1px 4px 1px 3px;
+margin: 3px -2px 14px;
 width:175px;
 height: 23px;
 border: 1px solid #8b979c;
@@ -258,12 +283,15 @@ border-radius: 20px;
   font-family: "Lucida Sans Unicode Regular", sans-serif;
   }
 .next_capt {
-  padding: 2px 3px;
+  padding: 1px 3px 2px 4px;
   margin: 3px 0 2px;
   width: 143px;
   height: 22px;
   border: 1px solid #79878d;
   border-radius: 15px;
+}
+.catalog .next_capt:nth-child(2) {
+  padding-top: 2px;
 }
 .next_capt span {
   display: block;
@@ -297,7 +325,7 @@ border-radius: 20px;
   font-family: "Lucida Sans Unicode Regular", sans-serif;
   color: #465961;
   line-height: 2.1;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.8px;
 }
 .catalog a:hover {
   font-family: Arial, sans-serif;
@@ -318,15 +346,16 @@ border-radius: 20px;
 .line {
   display: inline-block;
   clear: both;
-  margin: 0px 7px -11px;
+  margin: 0 7px -9px;
 }
 .line figure {
   display: block;
-  height: 128px;
+  height: 127px;
   width: 136px;
   border:1px solid #b0b9bc;
   border-radius: 7px;
   background: #fff;
+
 }
 .line a {
   float: left;
@@ -337,6 +366,7 @@ border-radius: 20px;
   padding: 5px;
 }
 .line h4 {
+  padding-left: 2px;
   color:#206988;
   font-size: 15px;
   font-weight: bold;
@@ -347,7 +377,7 @@ border-radius: 20px;
   color:#1f2528;
   font-size: 13px;
   letter-spacing: 0.3px;
-  padding-left: 4px;
+  padding-left: 5px;
 }
 .line p:last-child {
   color: #114165;
@@ -355,15 +385,21 @@ border-radius: 20px;
   font-weight: bold;
   font-family: Arial, sans-serif;
   font-style: italic;
-margin-top: 5px;
-margin-left: 6px;
+  margin-top: 5px;
+  margin-left: 8px;
 }
 .line .move {
-  margin-left: -7px;
-  letter-spacing: 1px;
+  margin-left: -4px;
+  letter-spacing: 0.8px;
 }
-.tovary div:last-child {
+.tovary .line:last-child {
+  margin-top: 1px;
+  margin-left: 5px;
+}
+.tovary .line:last-child figure {
   margin-top: 3px;
+  margin-bottom: -2px;
+  margin-left: 1px;
 }
 .brend {
   float: left;
@@ -373,8 +409,8 @@ margin-left: 6px;
   height: 625px;
 }
 .main_capt2 {
-padding: 1px 3px;
-margin: 2px -3px 13px;
+padding: 2px 3px;
+margin: 2px -2px 13px;
 width:173px;
 height: 23px;
 border: 1px solid #8b979c;
@@ -391,23 +427,29 @@ border-radius: 20px;
   }
 .sec_capt {
   display: inline-block;
-  padding: 2px 3px;
-  margin: 0 0 0 11px;
-  width: 130px;
-  height: 22px;
+  padding: 1px 5px;
+  margin: 0px 0 0 12px;
+  width: 126px;
+  height: 24px;
   border: 1px solid #79878d;
   border-radius: 15px;
 }
 .sec_capt span {
   display: block;
-  margin: -22px 0 0 28px;
+  margin: -22px 0 0 27px;
   font-size: 14px;
   text-transform: uppercase;
   color: #114165;
   font-family: "Lucida Sans Unicode Regular", sans-serif;
 }
+.to_move {
+  margin-left: -2px;
+}
 .brend form {
-  margin: 3px 0 0 22px;
+  margin: 2px 0 0 23px;
+}
+.brend form.disk {
+  padding-top: 1px;
 }
 .brend form label {
   font-family: "Lucida Sans Unicode Regular", sans-serif;
@@ -435,7 +477,7 @@ border-radius: 20px;
 }
 .logos {
   display: block;
-  margin: 42px 0 21px 107px;
+  margin: 41px auto 21px 109px;
 }
 footer {
   width: 907px;
@@ -449,8 +491,9 @@ footer .nav {
   height: 39px;
 }
 footer ul {
-  margin-left: 4px;
-  padding-top: 2px;
+  margin-left: 8px;
+  padding-top: 1px;
+  width: 319px;
 }
 footer li {
   float: left;
@@ -461,15 +504,22 @@ footer li {
 }
 footer li:first-child {
   border-left: none;
+  padding-left: 12px;
+  padding-right: 13px;
 }
 footer a {
   text-decoration: none;
   font-family: "Arial Regular", sans-serif;
   font-size: 12px;
   color: #bec6c9;
+  letter-spacing: 0.1px;
 }
 footer a:hover {
   color: #52abcb;
+}
+footer li:last-child {
+  float: right;
+  padding-left: 14px;
 }
 footer p {
   font-family: "Arial Regular", sans-serif;
