@@ -392,16 +392,18 @@
   }
   .menu {
     display: block;
-    float: left;
+    float: right;
     width: 100%;
     padding-top: 8px;
   }
   .menu__item {
-    padding-right: 0;
-    margin-left: 8%;
+    padding: 0 4%;
   }
   .menu__item:first-child {
-    margin-left: 12px;
+    padding-left: 1.8%; 
+  }
+  .menu__item:last-child {
+    padding-right: 0;
   }
   .menu__link:hover {
     border-bottom: 2px solid #edbfff;
