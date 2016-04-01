@@ -197,50 +197,93 @@ menu {
   border: 1px solid #b6b6b7;
   box-shadow: 0px 5px 5px 0px #a4a4a4;
 }
-.find_auto .labels ul {
-  display: inline-block;
-  width: 100%;
-}
-.find_auto .labels li {
+.find_auto .labels h3 {
   float: left;
   width: 88px;
-  padding: 2px 18px 3px 20px;
+  padding: 4px 17px 3px 20px;
   text-align: left;
   font-size: 10px;
   font-family: "Arial Black", sans-serif;
   font-weight: bold;
   color: #154468;
 }
-.find_auto .labels li:nth-child(2) {
+.find_auto .labels h1 {
+  float: left;
   padding: 1px 0 0 0;
   width: 156px;
   font-size: 12px;
   color: #154467;
+  font-family: "Arial Black", sans-serif;
+  font-weight: bold;
   text-align: center;
   letter-spacing: 0.3px;
 }
-.find_auto .labels li:last-child {
+.find_auto .labels h3:last-child {
+  float: right;
   text-align: right;
+  padding: 2px 22px 0 0;
 }
 .find_auto .disk {
+  clear: both;
   float: left;
   display: inline-block;
-  width: 200px;
+  width: 180px;
+  padding-top: 4px;
+  padding-left: 18px;
 }
 .find_auto label {
+  display: inline-block;
+  width: 71px;
   font-size: 10px;
   font-family: "Arial Regular", sans-serif;
   color: #000;
-}
-.find_auto .shiny {
-  float: right;
-  display: inline-block;
-  width: 200px;
+  line-height: 0.8;
 }
 .find_auto span {
   font-size: 8px;
   font-family: "Arial Regular", sans-serif;
   color: #77858b;
+  letter-spacing: 1px;
+}
+.find_auto select {
+  width: 103px;
+  height: 17px;
+}
+.find_auto .model label {
+  padding-top: 5px;
+}
+.find_auto .year label {
+  padding-top: 4px;
+}
+.find_auto select.year {
+  width: 58px;
+  margin-bottom: 4px;
+}
+.find_auto select.komplekt {
+  height: 18px;
+}
+.find_auto .komplekt label {
+  vertical-align: middle;
+}
+.find_auto .shiny {
+  clear: right;
+  float: right;
+  display: inline-block;
+  margin-right: 11px;
+  padding-top: 2px;
+  width: 180px;
+}
+.select__link {
+  clear: both;
+  display: block;
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  color: #154467;
+  text-decoration: underline;
 }
 .find_tires {
   float: left;
@@ -251,6 +294,79 @@ menu {
   border: 1px solid #b6b6b7;
   box-shadow: 0px 5px 5px 0px #a4a4a4;
 }
+.find_tires form {
+  margin-top: 7px;
+  margin-left: 13px;
+}
+.find_tires h1 {
+  padding-top: 3px;
+  padding-left: 10px;
+  font-size: 12px;
+  color: #154467;
+  font-family: "Arial Black", sans-serif;
+  font-weight: bold;
+  text-align: left;
+}
+.find_tires .size {
+  margin-bottom: 3px;
+}
+.find_tires label {
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+  width: 42px;
+  font-family: "Lucida Sans Unicode Regular", sans-serif;
+  font-size: 10px;
+  color: #000;
+}
+.find_tires select.size {
+  width: 51px;
+  height: 16px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+.find_tires .size label {
+  padding-top: 2px;
+  vertical-align: sub;
+}
+.find_tires .size span {
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.find_tires .radius label {
+  font-family: "Arial Regular", sans-serif;
+  font-size: 11px;
+  text-align: right;
+}
+.find_tires select.radius {
+  width: 46px;
+  height: 16px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  margin-left: 1px;
+}
+.find_tires .sezon {
+  margin-top: 1px;
+  margin-left: 1px;
+}
+.find_tires .sezon_type {
+  margin-left: 40px;
+  margin-top: -13px;
+}
+.find_tires .sezon_type label {
+  font-size: 12px;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  vertical-align: text-top;
+  padding-top: 2px;
+  margin-left: -5px;
+}
+.find_tires .sezon_type div {
+  height: 14px;
+}
+.find_tires .select__link {
+  margin-right: 18px;
+  margin-top: 2px;
+}
 .find_disk {
   float: left;
   margin: 13px 4px 0px 4px;
@@ -259,6 +375,83 @@ menu {
   border-radius: 17px;
   border: 1px solid #b6b6b7;
   box-shadow: 0px 5px 5px 0px #a4a4a4;
+}
+.find_disk .left {
+  float: left;
+  margin-top: 2px;
+  width: 176px;
+  border-right: 1px solid #bdc6ca;
+  box-sizing: border-box;
+}
+.find_disk form.disk_poisk {
+  padding-left: 16px;
+  padding-top: 4px;
+}
+.find_disk h1 {
+  padding-left: 9px;
+  padding-top: 1px;
+  font-size: 12px;
+  color: #154467;
+  font-family: "Arial Black", sans-serif;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 0.8px;
+}
+.find_disk label {
+  display: inline-block;
+  width: 86px;
+  color: #000;
+  font-size: 10px;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  text-align: left;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+.find_disk span {
+  color: #77858b;
+  font-size: 10px;
+  font-family: "Lucida Sans Unicode", sans-serif;
+}
+.find_disk .kol_ot label {
+  padding-top: 2px;
+}
+.find_disk select {
+  width: 58px;
+  height: 18px;
+}
+.find_disk .kol_ot select {
+  width: 50px;
+  vertical-align: bottom;
+}
+.find_disk .diam_krep select {
+  vertical-align: sub;
+}
+.find_disk option {
+  font-size: 11px;
+  font-family: "Arial Regular", sans-serif;
+}
+.find_disk .right {
+  float: right;
+}
+.find_disk form.dop_opt {
+  width: 82px;
+  padding-top: 5px;
+}
+.find_disk .right label {
+  width: 75px;
+  font-size: 9px;
+}
+.find_disk .right span {
+  display: block;
+  font-size: 8px;
+}
+.find_disk .right select {
+    margin-left: 1px;
+    margin-top: 4px;
+    margin-bottom: 5px;
+  }
+.find_disk .select__link {
+  margin-top: 0px;
 }
 main {
   margin-top: 16px;

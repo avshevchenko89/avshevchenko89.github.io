@@ -88,15 +88,13 @@
         <div class="select">
           <aside class="find_auto">
             <div class="labels">
-              <ul>
-                <li>Диски:</li>
-                <li>Поиск по автомобилю</li>
-                <li>Шины:</li>
-              </ul>
+                <h3>Диски:</h3>
+                <h1>Поиск по автомобилю</h1>
+                <h3>Шины:</h3>
             </div>
             <div class="disk">
               <form class="po_avto" action="#" method="post">
-                <div>
+                <div class="marka">
                   <label for="marka">Марка
                     <span>авто:</span>
                   </label>
@@ -104,7 +102,7 @@
                     <option value="marka"></option>
                   </select>
                 </div>
-                <div>
+                <div class="model">
                   <label for="model">Модель
                     <span>автомобиля:</span>
                   </label>
@@ -112,7 +110,7 @@
                     <option value="model"></option>
                   </select>
                 </div>
-                <div>
+                <div class="year">
                   <label for="year">Год выпуска
                     <span>автомобиля:</span>
                   </label>
@@ -120,7 +118,7 @@
                     <option value="year"></option>
                   </select>
                 </div>
-                <div>
+                <div class="komplekt">
                   <label for="komplekt">Комплектация:</label>
                   <select class="komplekt" name="">
                     <option value="komplekt"></option>
@@ -128,10 +126,9 @@
                 </div>
               </form>
             </div>
-
             <div class="shiny">
               <form class="po_avto" action="#" method="post">
-                <div>
+                <div class="marka">
                   <label for="marka">Марка
                     <span>авто:</span>
                   </label>
@@ -139,7 +136,7 @@
                     <option value="marka"></option>
                   </select>
                 </div>
-                <div>
+                <div class="model">
                   <label for="model">Модель
                     <span>автомобиля:</span>
                   </label>
@@ -147,7 +144,7 @@
                     <option value="model"></option>
                   </select>
                 </div>
-                <div>
+                <div class="year">
                   <label for="year">Год выпуска
                     <span>автомобиля:</span>
                   </label>
@@ -155,7 +152,7 @@
                     <option value="year"></option>
                   </select>
                 </div>
-                <div>
+                <div class="komplekt">
                   <label for="komplekt">Комплектация:</label>
                   <select class="komplekt" name="">
                     <option value="komplekt"></option>
@@ -163,9 +160,99 @@
                 </div>
               </form>
             </div>
+            <a href="#" class="select__link">поиск...</a>
           </aside>
-          <aside class="find_tires"></aside>
-          <aside class="find_disk"></aside>
+          <aside class="find_tires">
+            <h1>поиск шин</h1>
+            <form class="poisk_shin" action="index.html" method="post">
+              <div class="size">
+                <label for="size">Размер:</label>
+                <select class="size" name="">
+                  <option value="size">145</option>
+                </select>
+                <span>/</span>
+                <select class="size" name="">
+                  <option value="size"></option>
+                </select>
+              </div>
+              <div class="radius">
+                <label for="radius">R</label>
+                <select class="radius" name="">
+                  <option value="radius">12</option>
+                </select>
+              </div>
+              <div class="sezon">
+                <label for="sezon">Сезон:</label>
+                <div class="sezon_type">
+                <div class="leto">
+                  <input type="checkbox" name="" id="sezon">
+                  <label for="leto">лето</label>
+                </div>
+                <div class="zima">
+                  <input type="checkbox" name="" id="sezon">
+                  <label for="zima">зима</label>
+                </div>
+                <div class="vsesez">
+                  <input type="checkbox" name="" id="sezon">
+                  <label for="vsesez">всесез</label>
+                </div>
+              </div>
+              </div>
+            </form>
+            <a href="#" class="select__link">поиск...</a>
+          </aside>
+          <aside class="find_disk">
+            <div class="left">
+              <h1>поиск дисков</h1>
+              <form class="disk_poisk" action="index.html" method="post">
+                <div class="diametr_d">
+                  <label for="diametr_d">Диаметр
+                    <span>диска:</span>
+                  </label>
+                  <select class="diametr_d" name="">
+                    <option value="diametr_d">14</option>
+                  </select>
+                </div>
+                <div class="kol_ot">
+                  <label for="kol_ot">Количество
+                    <span>крепёжных отверстий: </span>
+                  </label>
+                  <select class="kol_ot" name="">
+                    <option value="kol_ot">3</option>
+                  </select>
+                </div>
+                <div class="diam_krep">
+                  <label for="diam_krep"> Диаметр
+                    <span>расположения крепёжных отверстий: </span>
+                  </label>
+                  <select class="diam_krep" name="">
+                    <option value="diam_krep">12</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="right">
+              <form class="dop_opt" action="index.html" method="post">
+                <div class="dzo">
+                  <label for="dzo">ДЦО
+                    <span>(диаметр центрального отверстия):</span>
+                  </label>
+                  <select class="dzo" name="">
+                    <option value="dzo">12</option>
+                  </select>
+                </div>
+                <div class="et">
+                  <label for="et">ET
+                    <span>(вылет диска):</span>
+                  </label>
+                  <select class="et" name="">
+                    <option value="et">12</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <a href="#" class="select__link">поиск...</a>
+          </aside>
         </div>
       </section>
 
