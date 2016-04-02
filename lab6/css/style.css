@@ -285,6 +285,9 @@ menu {
   color: #154467;
   text-decoration: underline;
 }
+.select__link:hover {
+  font-weight: bold;
+}
 .find_tires {
   float: left;
   margin: 13px 5px 0px 9px;
@@ -662,6 +665,7 @@ main {
   border-color: #7a95a1;
   border-radius: 11px;
   box-shadow: 1px 1px 5px #bec0c1;
+  cursor: pointer;
   background: linear-gradient(to bottom, #1f6787, #0c3357);
   text-transform: uppercase;
   font-family: "Arial Regular", sans-serif;

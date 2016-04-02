@@ -201,12 +201,28 @@ nav {
 .slider__img {
   display: none;
 }
-.slider__slider-img {
+.slider__slider {
   display: block;
   margin: 0 auto;
   padding-top: 78px;
   padding-left: 10px;
   width: 80px;
+}
+.slider__button {
+  display: inline-block;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  opacity: 0.3;
+}
+.slider__active {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(to bottom, #fdfdfd, #bdbcbd);
+  border-radius: 100%;
+  opacity: 1;
+  border: 3px solid rgba(0, 0, 0, 0.5);
 }
 .about-box {
   clear: both;
