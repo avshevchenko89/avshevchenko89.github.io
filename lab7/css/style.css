@@ -365,6 +365,15 @@ nav {
   padding-left: 45px;
   padding-bottom: 23px;
 }
+.slider__button--new {
+  border: 1px solid #f0f0f0;
+  background: #fff;
+  opacity: 1;
+}
+.slider__active--new {
+  background: linear-gradient(to top, #464646, #6f6f6f);
+  border: 3px solid #fff;
+}
 .updates {
   display: inline-block;
   position: relative;

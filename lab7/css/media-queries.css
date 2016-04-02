@@ -283,6 +283,9 @@
     clear: left;
     padding-left: 21%;
   }
+  .slider__active--new {
+    border-color: #fff;
+  }
   .updates {
     width: 49%;
     padding-top: 35px;
@@ -525,11 +528,14 @@
     height: inherit;
   }
   .info__slider {
-    width: 84px;
+    width: 87px;
     float: left;
     clear: left;
     padding-left: 20.5%;
     padding-top: 0;
+  }
+  .slider__active--new {
+    border-color: #fff;
   }
   .updates {
     width: 49%;
