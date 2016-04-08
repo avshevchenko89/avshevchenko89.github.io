@@ -14,11 +14,9 @@ var i = 0;
 do {
   if (arr[i] === name) {
     console.log(name + ', вы успешно вошли');
+  } else {
+    alert('Ошибка');
   }
   i = i + 1;
 }
 while (i < arr.length);
-
-if ((arr[0] != name) & (arr[1] != name) & (arr[2] != name) & (arr[3] != name) & (arr[4] != name)) {
-  alert('Ошибка');
-}
