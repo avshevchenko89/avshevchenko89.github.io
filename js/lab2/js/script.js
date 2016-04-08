@@ -15,6 +15,6 @@ for (var i = 0; i < arr.length; i++) {
     console.log(name + ', вы успешно вошли');
     break;
   } else if (arr[i] == arr[arr.length-1] && arr[i] != name) {
-    console.log('Ошибка');
+    alert('Ошибка');
   }
 }
