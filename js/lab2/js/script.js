@@ -14,7 +14,7 @@ for (var i = 0; i < arr.length; i++) {
   if (arr[i] == name) {
     console.log(name + ', вы успешно вошли');
     break;
-  } else if (arr[i] == arr[arr.length-1] && arr[i] != name) {
+  } else if ((i == arr.length - 1) && (arr[i] != name)) {
     alert('Ошибка');
   }
 }
