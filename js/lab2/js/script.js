@@ -10,13 +10,11 @@ console.log (arr);
 
 var name = prompt('Введите имя пользователя');
 
-var i = 0;
-do {
-  if (arr[i] === name) {
+for (var i = 0; i < arr.length; i++) {
+  if (arr[i] == name) {
     console.log(name + ', вы успешно вошли');
-  } else {
-    alert('Ошибка');
+    break;
+  } else if (arr[i] == arr[arr.length-1] && arr[i] != name) {
+    console.log('Ошибка');
   }
-  i = i + 1;
 }
-while (i < arr.length);
