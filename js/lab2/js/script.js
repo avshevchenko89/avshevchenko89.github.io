@@ -11,6 +11,10 @@ console.log (arr);
 var name = prompt('Введите имя пользователя');
 
 for (var i = 0; i < arr.length; i++) {
+  if (arr[i] == '') {
+    alert('Пустой массив');
+    break;
+  }
   if (arr[i] == name) {
     console.log(name + ', вы успешно вошли');
     break;
