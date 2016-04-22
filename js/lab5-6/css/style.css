@@ -1,0 +1,31 @@
+.container {
+    margin: 0 auto;
+    float: none;
+}
+
+.timer {
+    margin: 50px auto;
+    border-radius: 30px;
+}
+
+p {
+    font-size: 125px;
+}
+
+span {
+    display: block;
+    float: right;
+    margin-top: -30px;
+    margin-right: 50px;
+    font-size: 30px;
+}
+
+.start-pause,
+.clear {
+    border-radius: 15px !important;
+    font-size: 40px !important;
+}
+
+.clear {
+    float: right;
+}
