@@ -1,0 +1,39 @@
+.wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+
+form {
+    width: 100%;
+    margin: 50px auto 10px;
+    padding: 15px 50px;
+    border: 2px solid #aaa;
+}
+
+div {
+    margin: 20px auto;
+}
+
+label {
+    display: inline-block;
+    width: 75px;
+}
+
+.helptip {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 2px 5px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 3px 1px #ddd, -1px -1px 3px 1px #ddd;
+    font-family: "Courier New", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+button {
+    display: block;
+    margin-left: 15px;
+    padding: 5px 15px;
+    background: linear-gradient(to top, #bbb, #eee);
+    border-radius: 5px;
+}
