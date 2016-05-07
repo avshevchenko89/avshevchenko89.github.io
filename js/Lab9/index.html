@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel, select, checkbox</title>
+    <link rel="stylesheet" href="css/uniform.aristo.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="js/jquery.jcarousel.min.js"></script>
+    <script src="js/jquery.uniform.js"></script>
+    <script src="js/jquery.checkbox.js"></script>
+    <script src="js/jquery.carousel.select.js"></script>
+</head>
+
+<body>
+    <div class="jcarousel-wrapper">
+        <div class="jcarousel">
+            <ul class="jcarousel-list">
+                <li><img src="img/img1.jpg" alt="img1"></li>
+                <li><img src="img/img2.jpg" alt="img2"></li>
+                <li><img src="img/img3.jpg" alt="img3"></li>
+                <li><img src="img/img4.jpg" alt="img4"></li>
+            </ul>
+        </div>
+        <a href="#" class="jcarousel-prev">&lsaquo;</a>
+        <a href="#" class="jcarousel-next">&rsaquo;</a>
+    </div>
+    <form action="#" method="post">
+        <div class="select-box">
+            <select name="rest" id="rest">
+                <option value="place" selected>Место отдыха</option>
+                <option value="beach">Пляж у моря</option>
+                <option value="mountain">Горы</option>
+                <option value="forest">Лес</option>
+                <option value="river">У реки</option>
+                <option value="village">Домик в деревне</option>
+            </select>
+        </div>
+
+        <div class="query-checkbox">
+            <div>
+                <label for="jch1">label 1</label>
+                <input type="checkbox" class="niceCheck" id="jch1" tabindex="1" />
+            </div>
+            <div>
+                <label for="jch2">label 2</label>
+                <input type="checkbox" class="niceCheck" checked="checked" id="jch2" tabindex="2" value="2" />
+            </div>
+            <div>
+                <label for="jch3">label 3</label>
+                <input type="checkbox" class="niceCheck" id="jch3" checked="checked" disabled="disabled" />
+            </div>
+        </div>
+
+        <div class="css-checkbox">
+            <div>
+                <label for="cch1">label 1</label>
+                <input type="checkbox" id="cch1" tabindex="1" >
+            </div>
+            <div>
+                <label for="cch2">label 2</label>
+                <input type="checkbox" id="cch2" tabindex="2" checked="checked">
+            </div>
+            <div>
+                <label for="cch3">label 3</label>
+                <input type="checkbox" id="cch3" tabindex="3" checked="checked" disabled="disabled">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
