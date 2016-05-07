@@ -121,16 +121,16 @@ div {
 
 /*CSS checkbox*/
 
-input[type=checkbox] {
+.css-checkbox input[type=checkbox] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
 }
 
-label {
+.css-checkbox label {
     cursor: pointer;
 }
 
-label:after {
+.css-checkbox label:after {
     content: ' ';
     display: inline-block;
     width: 17px;
@@ -140,15 +140,15 @@ label:after {
     top: 3px;
     margin-left: 15px;
 }
-/*
-input[type=checkbox]:checked + label:after {
+
+.css-checkbox input[type=checkbox]:checked + label:after {
     background-position: 0 -17px;
 }
 
-label:hover:after {
+.css-checkbox label:hover:after {
     background-position: 0 -34px;
 }
 
-input[type=checkbox]:checked + label:hover:after {
+.css-checkbox input[type=checkbox]:checked + label:hover:after {
     background-position: 0 -51px;
-}*/
+}
