@@ -1,6 +1,9 @@
 $(function() {
     $('.jcarousel').jcarousel({
+        wrap: 'circular',
         animation: 'slow'
+    }).jcarouselAutoscroll({
+        interval: 2000
     });
 
     $('.jcarousel-prev').jcarouselControl({
