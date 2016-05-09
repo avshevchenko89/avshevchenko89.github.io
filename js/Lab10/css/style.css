@@ -49,10 +49,9 @@ a:hover {
     border-bottom: 0;
 }
 
-.first,
-.second,
-.third {
+.sub-menu {
     display: none;
+    opacity: 1;
 }
 
 .first {
