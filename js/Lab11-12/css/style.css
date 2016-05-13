@@ -5,6 +5,7 @@
 
 body {
     background: #cab0d7;
+    background: linear-gradient(#cab0d7, #dd69c3);
 }
 
 /*carousel*/
