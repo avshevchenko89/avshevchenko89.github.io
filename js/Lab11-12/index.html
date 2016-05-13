@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 11-12</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <section class="carousel-wrapper">
+        <h1>Про котейку..</h2>
+        <div class="carousel">
+            <div class="carousel-arrow-left"><span>&lsaquo;</span></div>
+            <div class="carousel-hider">
+                <ul class="carousel-list">
+                    <li class="carousel-element">
+                        <img src="img/img1.jpg" alt="">
+                        <p>Так я сплю</p>
+                    </li>
+                    <li class="carousel-element">
+                        <img src="img/img2.jpg" alt="">
+                        <p>Привет! Я проснулся</p>
+                    </li>
+                    <li class="carousel-element">
+                        <img src="img/img3.jpg" alt="">
+                        <p>Потом я делаю зарядку</p>
+                    </li>
+                    <li class="carousel-element">
+                        <img src="img/img4.jpg" alt="">
+                        <p>Это мои друзья</p>
+                    </li>
+                    <li class="carousel-element">
+                        <img src="img/img5.jpg" alt="">
+                        <p>И это все мне?!</p>
+                    </li>
+                    <li class="carousel-element">
+                        <img src="img/img6.jpg" alt="">
+                        <p>Когда я выросту, буду большим ленивым котейкой:)</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="carousel-arrow-right"><span>&rsaquo;</span></div>
+        </div>
+    </section>
+    <section class="shablon">
+        <script type="text/html" id="profile">
+            <div class="profile-wrapper">
+                <div class="header">
+                    <h1><%= name %></h1>
+                    <img src="<%= photo.src%>" alt="<%= photo.alt%>">
+                    <p><%= job %></p>
+                </div>
+                <hr>
+                <div class="main">
+                    <h3><%= why %></h3>
+                    <ul>
+                        <% for (var i = 0; i < reasons.length; i++) { %>
+                        <li><%= reasons[i] %></li>
+                        <% } %>
+                    </ul>
+                </div>
+                <hr>
+                <div class="contacts">
+                    <p><%= tel %> <%= number %></p>
+                    <p><%= fb %> <a href="<%= fb_link%>"><%= fb_link %></a></p>
+                </div>
+                <hr>
+                <div class="feedback">
+                    <p><%= feedback %></p>
+                    <h4><%= feedback_text %></h4>
+                </div>
+            </div>
+        </script>
+    </section>
+</body>
+
+</html>

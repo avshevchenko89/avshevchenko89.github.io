@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #cab0d7;
+}
+
+/*carousel*/
+
+.carousel-wrapper {
+    height: 230px;
+}
+
+h1 {
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+.carousel {
+    width: 983px;
+    margin: 0 auto;
+}
+
+.carousel-hider {
+    width: 875px;
+    float: left;
+    overflow: hidden;
+}
+
+.carousel-list {
+    position: relative;
+    list-style: none;
+    width: 10000px;
+}
+
+.carousel-element {
+    display: block;
+    margin-right: 25px;
+    float: left;
+}
+
+.carousel-element img {
+    max-width: 200px;
+}
+
+.carousel-element p {
+    max-width: 200px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 14px;
+}
+
+.carousel-arrow-left, .carousel-arrow-right {
+    float: left;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(83, 72, 75, 0.5);
+    border-radius: 100%;
+    color: #fff;
+    font: 20px Arial, sans-serif;
+    text-align: center;
+    text-shadow: 0 0 1px #000;
+    margin: 63px 15px;
+}
+
+.carousel-arrow-left:hover, .carousel-arrow-right:hover {
+    cursor: pointer;
+    background-color: #000;
+}
+
+/*shablon*/
+h2 {
+    width: 50%;
+    margin: 20px auto 0;
+    text-align: center;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.profile-wrapper {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.profile-wrapper div {
+    margin: 10px auto;
+}
+
+.profile-wrapper p,
+.profile-wrapper li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header p {
+    font-size: 20px;
+}
+
+h3 {
+    padding-bottom: 5px;
+    font-style: italic;
+}
+
+.main li {
+    margin-left: 30px;
+}
+
+h4 {
+    font-family: 'Lobster', cursive;
+}
