@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="js/tmpl.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <script type="text/html" id="test">
+            <h1><%= header %></h1>
+            <form action="#" method="post">
+                <% for (var i = 0; i < questions.length; i++) { %>
+                <div>
+                    <p><%= (i+1) + '. ' + questions[i].title %></p>
+                    <% for (var j = 0; j < questions[i].answers.length; j++) { %>
+                        <div>
+                            <input type="checkbox"
+                            name="<%= questions[i].checkboxname[j] %>"
+                            id="<%= questions[i].id[j] %>" />
+                            <label for="<%= questions[i].id[j] %>">
+                            <%= questions[i].answers[j] %></label>
+                        </div>
+                    <% }; %>
+                </div>
+                <% }; %>
+                <button><%= submit %></button>
+            </form>
+        </script>
+    </div>
+</body>
+</html>
