@@ -5,21 +5,21 @@ $(function() {
         header: 'Тест по программированию',
         questions: [{
             title: 'Вопрос №1',
-            checkboxname: ['one','two','three'],
+            radioname: 'one',
             id: ['1','2','3'],
             answers:['Вариант ответа №1','Вариант ответа №2','Вариант ответа №3'],
             correct: 1
             },
             {
             title: 'Вопрос №2',
-            checkboxname: ['one','two','three'],
+            radioname: 'two',
             id: ['1','2','3'],
             answers:['Вариант ответа №1','Вариант ответа №2','Вариант ответа №3'],
             correct: 2
             },
             {
             title: 'Вопрос №3',
-            checkboxname: ['one','two','three'],
+            radioname: 'three',
             id: ['1','2','3'],
             answers:['Вариант ответа №1','Вариант ответа №2','Вариант ответа №3'],
             correct: 3

@@ -18,8 +18,8 @@
                     <p><%= (i+1) + '. ' + questions[i].title %></p>
                     <% for (var j = 0; j < questions[i].answers.length; j++) { %>
                         <div>
-                            <input type="checkbox"
-                            name="<%= questions[i].checkboxname[j] %>"
+                            <input type="radio"
+                            name="<%= questions[i].radioname %>"
                             id="<%= questions[i].id[j] %>" />
                             <label for="<%= questions[i].id[j] %>">
                             <%= questions[i].answers[j] %></label>
