@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <header>
+        <form action="#" method="post">
+            <button type="button" class="add">Добавить</button>
+            <button type="button" class="reset">Обновить</button>
+            <input type="text" placeholder="Событие, дата или учасник">
+        </form>
+    </header>
+    <main>
+        <div class="toolbar">
+            <button class="back"><span>&#9668;</span></button>
+            <span class="date"></span>
+            <button class="forward"><span>&#9658;</span></button>
+            <button class = "today">Сегодня</button>
+        </div>
+        <div id="calendar">
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
