@@ -70,7 +70,9 @@ tr,
 td {
     height: 175px;
     width: 175px;
+    padding: 10px;
     border: 1px solid #bbb;
+    box-sizing: border-box;
     text-align: left;
     vertical-align: top;
 }

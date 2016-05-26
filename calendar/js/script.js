@@ -69,7 +69,13 @@ function createCalendar(id, year, month) {
         default: calMonth='Декабрь';
     }
 
-    (document).querySelector('.date').innerHTML = calMonth + ' ' + year;
+    document.querySelector('.date').innerHTML = calMonth + ' ' + year;
+
+    var td = document.getElementsByTagName('td');
+
+    for (var i = 0; i < td.length; i++) {
+        td[i].addEventListener('click', addNote);
+    }
 }
 
 function getDay(date) { // получить номер дня недели, от 0(пн) до 6(вс)
@@ -83,18 +89,20 @@ var month = 3;
 
 createCalendar('calendar',year, month);
 
+
 //предыдущий месяц
-(document).querySelector('.back').addEventListener('click', function () {
+document.querySelector('.back').addEventListener('click', function () {
     month -=1;
     if (month < 1) {
         year -=1;
         month = 12;
     }
     createCalendar('calendar',year, month);
+
 });
 
 //следующий месяц
-(document).querySelector('.forward').addEventListener('click', function () {
+document.querySelector('.forward').addEventListener('click', function () {
     month +=1;
     if (month > 12) {
         year +=1;
@@ -103,28 +111,30 @@ createCalendar('calendar',year, month);
     createCalendar('calendar',year, month);
 });
 
-// !!
+
 function addNote() {
-    var td = (document).getElementsByTagName('td');
-
-    var note = prompt('Введите текст заметки, затем выберете дату');
-
+    var td = this;
+    var note = prompt('Введите заметку и нажмите "Добавить"');
     localStorage.setItem('note', note);
 
-    for (var i=0; i<td.length; i++) {
-        td[i].addEventListener('click', function() {
-            this.style.background = '#B9EEE9';
-            this.innerHTML+='<br><h3>' + localStorage.getItem('note') + '</h3>';
-        });
+    /*var note = document.createElement('input');
+    note.type = 'text';
+    this.appendChild(note);*/
 
-    };
+    this.removeEventListener('click', addNote);
+    document.querySelector('.add').addEventListener('click', function () {
+
+        /*var text = note.textContent || note.innerText;
+        console.log(text);
+        td.removeChild(note);*/
+
+        td.innerHTML+='<br><h3>' + localStorage.getItem('note') + '</h3>';
+        td.style.background = '#B9EEE9';
+    });
 }
 
-(document).querySelector('.add').addEventListener('click', addNote);
 
-// !!
-
-(document).querySelector('.reset').addEventListener('click', function () {
+document.querySelector('.reset').addEventListener('click', function () {
     createCalendar('calendar',year, month);
 });
 
