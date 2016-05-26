@@ -22,7 +22,7 @@ header button {
 
 header input {
     float: right;
-    padding: 4px 20px 4px 5px;
+    padding: 4px 12px;
 
 }
 
@@ -68,11 +68,17 @@ table {
 
 tr,
 td {
-    height: 175px;
-    width: 175px;
+    height: 100px;
+    width: 150px;
     padding: 10px;
     border: 1px solid #bbb;
     box-sizing: border-box;
+    color: #a9a9a9;
+    font-weight: bold;
     text-align: left;
     vertical-align: top;
+}
+
+td p {
+    font-weight: normal;
 }

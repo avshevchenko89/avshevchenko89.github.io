@@ -1,3 +1,8 @@
+var now = new Date();
+var today = now.getDate();
+var todayYear = now.getFullYear();
+var todayMonth = now.getMonth()+1;
+
 function createCalendar(id, year, month) {
     var elem = document.getElementById(id);
 
@@ -76,6 +81,27 @@ function createCalendar(id, year, month) {
     for (var i = 0; i < td.length; i++) {
         td[i].addEventListener('click', addNote);
     }
+
+    for (var i = 0; i < td.length; i++) {
+       if ((td[i].innerHTML == today) && (d.getMonth() == todayMonth) && (d.getFullYear() == todayYear)) {
+            td[i].style.background = '#f4f4f4';
+        }
+    }
+
+    document.getElementById('btn').addEventListener('click', function() {
+        var find = document.getElementById('find').value;
+        find = find.split(' ');
+        var findDay = +find[0];
+        var findMonth = +find[1];
+        var findYear = +find[2];
+        createCalendar('calendar', findYear, findMonth);
+
+        for (var i = 0; i < td.length; i++) {
+            if (td[i].innerHTML == findDay) {
+                td[i].style.background = '#C6EE8E';
+            }
+        }
+    });
 }
 
 function getDay(date) { // получить номер дня недели, от 0(пн) до 6(вс)
@@ -87,7 +113,7 @@ function getDay(date) { // получить номер дня недели, от
 var year = 2013;
 var month = 3;
 
-createCalendar('calendar',year, month);
+createCalendar('calendar', year, month);
 
 
 //предыдущий месяц
@@ -97,7 +123,7 @@ document.querySelector('.back').addEventListener('click', function () {
         year -=1;
         month = 12;
     }
-    createCalendar('calendar',year, month);
+    createCalendar('calendar', year, month);
 
 });
 
@@ -108,34 +134,36 @@ document.querySelector('.forward').addEventListener('click', function () {
         year +=1;
         month = 1;
     }
-    createCalendar('calendar',year, month);
+    createCalendar('calendar', year, month);
 });
 
 
 function addNote() {
     var td = this;
-    var note = prompt('Введите заметку и нажмите "Добавить"');
-    localStorage.setItem('note', note);
 
-    /*var note = document.createElement('input');
+    var note = document.createElement('input');
     note.type = 'text';
-    this.appendChild(note);*/
+    note.id = 'txt';
 
+    this.appendChild(note);
     this.removeEventListener('click', addNote);
     document.querySelector('.add').addEventListener('click', function () {
 
-        /*var text = note.textContent || note.innerText;
-        console.log(text);
-        td.removeChild(note);*/
+        var text = document.getElementById('txt').value;
+        localStorage.setItem('note', text);
+        td.removeChild(note);
 
-        td.innerHTML+='<br><h3>' + localStorage.getItem('note') + '</h3>';
+        td.innerHTML+='<br><p>' + localStorage.getItem('note') + '</p>';
         td.style.background = '#B9EEE9';
     });
 }
 
 
 document.querySelector('.reset').addEventListener('click', function () {
+    localStorage.clear();
     createCalendar('calendar',year, month);
 });
 
-
+document.querySelector('.today').addEventListener('click', function () {
+    createCalendar('calendar', todayYear, todayMonth);
+});
