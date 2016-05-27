@@ -1,3 +1,5 @@
+'use strict';
+
 var now = new Date();
 var today = now.getDate();
 var todayYear = now.getFullYear();
@@ -17,7 +19,7 @@ function createCalendar(id, year, month) {
     // и до дня, с которого начинается месяц
     // * * * | 1  2  3  4
     for (var i = 0; i < getDay(d); i++) {
-        table += '<td>'+dayName[i] +'</td>';
+        table += '<td>'+ dayName[i] +'</td>';
     }
 
 
@@ -48,6 +50,8 @@ function createCalendar(id, year, month) {
 
     elem.innerHTML = table;
 
+    var calMonth;
+
     switch (d.getMonth()) {
         case 1: calMonth='Январь';
             break;
@@ -76,15 +80,15 @@ function createCalendar(id, year, month) {
 
     document.querySelector('.date').innerHTML = calMonth + ' ' + year;
 
-    var td = document.getElementsByTagName('td');
+    var tdList = document.getElementsByTagName('td');
 
-    for (var i = 0; i < td.length; i++) {
-        td[i].addEventListener('click', addNote);
+    for (var i = 0; i < tdList.length; i++) {
+        tdList[i].addEventListener('click', addNote);
     }
 
-    for (var i = 0; i < td.length; i++) {
-       if ((td[i].innerHTML == today) && (d.getMonth() == todayMonth) && (d.getFullYear() == todayYear)) {
-            td[i].style.background = '#f4f4f4';
+    for (var i = 0; i < tdList.length; i++) {
+       if ((tdList[i].innerHTML == today) && (d.getMonth() == todayMonth) && (d.getFullYear() == todayYear)) {
+            tdList[i].style.background = '#f4f4f4';
         }
     }
 
@@ -96,9 +100,9 @@ function createCalendar(id, year, month) {
         var findYear = +find[2];
         createCalendar('calendar', findYear, findMonth);
 
-        for (var i = 0; i < td.length; i++) {
-            if (td[i].innerHTML == findDay) {
-                td[i].style.background = '#C6EE8E';
+        for (var i = 0; i < tdList.length; i++) {
+            if (tdList[i].innerHTML == findDay) {
+                tdList[i].style.background = '#C6EE8E';
             }
         }
     });
@@ -147,6 +151,7 @@ function addNote() {
 
     this.appendChild(note);
     this.removeEventListener('click', addNote);
+
     document.querySelector('.add').addEventListener('click', function () {
 
         var text = document.getElementById('txt').value;
@@ -156,6 +161,7 @@ function addNote() {
         td.innerHTML+='<br><p>' + localStorage.getItem('note') + '</p>';
         td.style.background = '#B9EEE9';
     });
+
 }
 
 
