@@ -2,7 +2,7 @@ $(function() {
     $('.carousel').carousel();
 
     //шаблон
-    var data = {
+    var anketa = {
         name: 'Васька',
         photo: {
             src: 'img/photo.jpg',
@@ -23,13 +23,13 @@ $(function() {
 
     // JavaScript Micro-Templating
     var profile = $('#profile').html();
-    var content = tmpl(profile, data);
+    var content = tmpl(profile, anketa);
     $('.shablon').append('<h2>JavaScript Micro-Templating</h2>');
     $('.shablon').append(content);
 
     // Шаблонизатор LoDash
     var profile = $('#profile').html();
-    var content = _.template(profile)(data);
+    var content = _.template(profile)(anketa);
     $('.shablon').append('<h2>LoDash</h2>');
     $('.shablon').append(content);
 });
