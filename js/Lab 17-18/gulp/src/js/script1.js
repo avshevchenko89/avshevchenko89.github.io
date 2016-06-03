@@ -1,5 +1,10 @@
 console.log('This is script1');
 
-var a;
+function add () {
+    var a=2;
+    var b=3;
+    return a+b;
+}
 
-var b;
+add();
+
