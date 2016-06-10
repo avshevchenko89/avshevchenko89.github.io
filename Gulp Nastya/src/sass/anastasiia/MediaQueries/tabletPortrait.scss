@@ -1,0 +1,72 @@
+@import '../../mq';
+
+@media #{$tabletPortrait} {
+    $k: .06511;
+    @import '../mobile';
+
+    .tablet-background-image {
+        display: block;
+    }
+
+    .tablet-background-image::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#f96332, #000);
+        content: '';
+        opacity: .7;
+        z-index: 20;
+    }
+
+    .phone-background-image {
+        display: none;
+    }
+
+    .desktop-background-image {
+        display: none;
+    }
+
+    .container {
+        left: 31%;
+        width: 38%;
+    }
+
+    .logo {
+        width: 90px;
+        margin: 215px auto 82px;
+    }
+
+    .form-container {
+        height: 170px;
+    }
+
+    [type="text"] {
+        height: 41px;
+        padding: 0 0 0 44px;
+        background-position: 14px center;
+        background-size: 18px;
+    }
+
+    [type="password"] {
+        height: 41px;
+        padding: 0 0 0 44px;
+        background-position: 14px center;
+        background-size: 18px;
+    }
+
+    [type="submit"] {
+        height: 41px;
+        margin: 20px 0 0;
+    }
+
+    .links-container {
+        margin: 19px auto 0;
+
+        &>a {
+            font-size: 8px;
+        }
+    }
+}

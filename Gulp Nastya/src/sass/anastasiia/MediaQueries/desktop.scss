@@ -1,0 +1,6 @@
+@import '../../mq';
+
+@media #{$desktop} {
+    //$k: 1;
+    @import '../desktop';
+}

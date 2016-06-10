@@ -1,0 +1,46 @@
+@import '../../mq';
+
+@media #{$phoneLandscape} {
+    $k: .075;
+    @import '../mobile';
+
+    .phone-background-image {
+        background-position: center;
+    }
+
+    .container {
+        left: 28%;
+        width: 44%;
+    }
+
+    .logo {
+        width: px(180, $k);
+        margin: 50px auto;
+    }
+
+    .form-container {
+        height: 120px;
+    }
+
+    [type="text"] {
+        height: 35px;
+    }
+
+    [type="password"] {
+        height: 35px;
+        background-size: 21px;
+    }
+
+    [type="submit"] {
+        height: 35px;
+    }
+
+    .links-container {
+        margin: 24px auto 0;
+
+        &>a {
+            font-size: 11px;
+        }
+    }
+
+}

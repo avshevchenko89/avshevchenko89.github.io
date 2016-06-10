@@ -1,0 +1,48 @@
+@import '../../mq';
+
+@media #{$desktopWide} {
+    $k: 1;
+    @import '../desktop';
+
+    .container {
+        left: 35%;
+        width: 30%;
+    }
+
+    .logo {
+        width: 100px;
+        margin: 200px auto 100px;
+    }
+
+    .form-container {
+        height: 200px;
+    }
+
+    [type="text"] {
+        height: 47px;
+        padding: 0 0 0 70px;
+        background-position: 24px center;
+        background-size: 24px;
+    }
+
+    [type="password"] {
+        height: 47px;
+        padding: 0 0 0 70px;
+        background-position: 24px center;
+        background-size: 24px;
+    }
+
+    [type="submit"] {
+        height: 47px;
+        margin: 30px 0 0;
+        font-size: 14px;
+    }
+
+    .links-container {
+        margin: 30px auto 0;
+
+        & > a {
+            font-size: 12px;
+        }
+    }
+}

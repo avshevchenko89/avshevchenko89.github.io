@@ -1,0 +1,51 @@
+@import '../../mq';
+
+@media #{$tabletLandscape} {
+    //$k: ;
+    @import '../desktop';
+
+    .container {
+        top: 0;
+        left: 31%;
+        width: 38%;
+    }
+
+    .logo {
+        width: 90px;
+        margin: 215px auto 82px;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 170px;
+    }
+
+    [type="text"] {
+        height: 41px;
+        padding: 0 0 0 44px;
+        background: url('../images/anastasiia/username-icon.png') 14px center no-repeat rgba(255, 255, 255, .1);
+        background-size: 18px;
+    }
+
+    [type="password"] {
+        height: 41px;
+        padding: 0 0 0 44px;
+        background: url('../images/anastasiia/password-icon.png') 14px center no-repeat rgba(255, 255, 255, .1);
+        background-size: 18px;
+    }
+
+    [type="submit"] {
+        height: 41px;
+        margin: 20px 0 0;
+    }
+
+    .links-container {
+        margin: 19px auto 0;
+
+        & > a {
+            font-size: 8px;
+        }
+    }
+}

@@ -1,0 +1,3 @@
+@function px($px, $k) {
+    @return $px * $k * 1vw;
+}
