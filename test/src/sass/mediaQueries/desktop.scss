@@ -1,0 +1,10 @@
+@media (min-width: 1025px) {
+
+    @import '../mobile';
+
+    .wrapper {
+        width: 55%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}

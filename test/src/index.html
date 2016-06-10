@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <div class="page current-page">1</div>
+            <div class="page">2</div>
+            <div class="page">3</div>
+            <div class="page">4</div>
+        </div>
+
+        <div class="content">
+            <div class="step current-step first">
+                <h1>1. Введите имя и e-mail</h1>
+
+                <form action="#" method="post" class="login">
+                    <input type="text" placeholder="Имя" class="name" autocomplete="on" required> <span class="alert alert-name">Заполните поле!</span>
+                    <input type="email" placeholder="E-mail" class="email" autocomplete="on" required> <span class="alert alert-email">Заполните поле!</span> <span class="alert alert-email-wr">Введите корректный e-mail.</span>
+                </form>
+            </div>
+            <div class="step second">
+                <h1>2. Выберите страну и город</h1>
+
+                <form action="#" method="post">
+                    <select name="country" id="country">
+                        <option value="country" selected disabled>Страна</option>
+                    </select>
+                    <select name="city" id="city">
+                        <option value="city" selected disabled>Город</option>
+                    </select>
+                </form>
+            </div>
+            <div class="step third">
+                <h1>3. Отметьте социальные сети</h1>
+
+                <form action="#" method="post">
+                    <div><input type="checkbox" id="fb"><label for="fb">Facebook</label></div>
+                    <div><input type="checkbox" id="vk"><label for="vk">Вконтакте</label></div>
+                    <div><input type="checkbox" id="tw"><label for="tw">Twitter</label></div>
+                    <div><input type="checkbox"id="od"><label for="od">Одноклассники</label></div>
+                </form>
+            </div>
+            <div class="step fourth">
+                <h1>4. Выберите любимого котика</h1>
+                <div class="images">
+                    <img src="img/cat1.jpg" alt="cat1" class="cat">
+                    <img src="img/cat2.jpg" alt="cat2" class="cat">
+                    <img src="img/cat3.jpg" alt="cat3" class="cat">
+                    <img src="img/dog4.jpg" alt="dog"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button class="prev">< Предыдущий</button>
+            <button class="next">Следующий ></button>
+        </div>
+    </div>
+</body>
+</html>
