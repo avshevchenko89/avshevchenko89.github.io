@@ -43,21 +43,24 @@ $(function () {
 
     //controlButtons
     $prevButton.on('click', function () {
+        console.log($('.current-step'));
         if (!($('.current-step').hasClass('.first'))) {
             $('.current-step').removeClass('current-step').hide().prev().show().addClass('current-step');
             $('.current-page').removeClass('current-page').prev().removeClass('passed-page').addClass('current-page');
-
+            anketa.start();
         }
     });
 
     $nextButton.on('click', function () {
         if ($flag) {
+            console.log($('.current-step'));
             if (!($('.current-step').hasClass('fourth'))) {
                 if (($('.current-step').hasClass('third'))) {
                     $nextButton.addClass('finish').html('Завершить');
                 }
                 $('.current-step').removeClass('current-step').hide().next().show().addClass('current-step');
                 $('.current-page').removeClass('current-page').addClass('passed-page').next().addClass('current-page');
+                anketa.start();
             } else {
                 anketa.showResult();
             }
@@ -66,8 +69,6 @@ $(function () {
 
     //constructor
     function Anketa(elem) {
-        $flag = false;
-
         $('.alert').hide();
 
         function nameCheck(name) {
@@ -152,6 +153,7 @@ $(function () {
         }
 
         function locationCheck() {
+            $flag = false;
             if ($('#country').val() == null) {
                 $('#country').css({'border': '1px solid #ff0000'});
                 $('.alert-country').show();
@@ -161,7 +163,7 @@ $(function () {
                 $('.alert-country').hide();
                 $flag = true;
             }
-            return $flag;
+            /*return $flag;*/
         }
 
         function socialInput(target) {
@@ -180,6 +182,7 @@ $(function () {
         }
 
         function socialInputCheck(target) {
+            $flag = false;
             if ($(target).find('input:checked').length == 0) {
                 var $alertEmpty = $('<span class="alert">Пожалуйста выберите соц.сеть</span>');
                 $(target).find('form').append($alertEmpty);
@@ -203,6 +206,7 @@ $(function () {
                     }
                 });
             }
+            return $flag;
         }
 
         function imgChoose() {
@@ -214,9 +218,11 @@ $(function () {
         }
 
         this.start = function () {
-            console.log('action start');
+            $flag = false;
             var $current = $('.current-step');
+            console.log($current);
             if ($($current).hasClass('first')) {
+                console.log('first');
                 $nextButton.on('click', function () {
                     var $name = $('.name').val();
                     nameCheck($name);
@@ -226,21 +232,28 @@ $(function () {
 
                     localStorage.setItem('name', $name);
                     localStorage.setItem('email', $email);
-
-                    selectLocation();
-                })
+                });
             } else if ($($current).hasClass('second')) {
                 console.log('second');
+                selectLocation();
+
                 $nextButton.on('click', function () {
                     locationCheck();
-                    socialInput($('.third'));
+                    console.log(localStorage.getItem('country'));
+                    console.log(localStorage.getItem('city'));
                 });
             } else if ($($current).hasClass('third')) {
+                console.log('three');
                 socialInput($('.third'));
-                socialInputCheck($('.third'));
+                $nextButton.on('click', function () {
+                    socialInputCheck($('.third'));
+                });
             } else if ($($current).hasClass('fourth')) {
+                console.log('four');
                 imgChoose();
-                imgCheck();
+                $nextButton.on('click', function () {
+                    imgCheck();
+                });
             }
         };
 
