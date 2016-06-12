@@ -161,6 +161,7 @@ $(function () {
                 $('.alert-country').hide();
                 $flag = true;
             }
+            return $flag;
         }
 
         function socialInput(target) {
@@ -216,7 +217,7 @@ $(function () {
             console.log('action start');
             var $current = $('.current-step');
             if ($($current).hasClass('first')) {
-                $('.next').on('click', function () {
+                $nextButton.on('click', function () {
                     var $name = $('.name').val();
                     nameCheck($name);
 
@@ -225,11 +226,15 @@ $(function () {
 
                     localStorage.setItem('name', $name);
                     localStorage.setItem('email', $email);
+
+                    selectLocation();
                 })
             } else if ($($current).hasClass('second')) {
-                console.log($current);
-                selectLocation();
-                locationCheck();
+                console.log('second');
+                $nextButton.on('click', function () {
+                    locationCheck();
+                    socialInput($('.third'));
+                });
             } else if ($($current).hasClass('third')) {
                 socialInput($('.third'));
                 socialInputCheck($('.third'));
