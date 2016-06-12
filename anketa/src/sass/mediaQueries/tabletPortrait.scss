@@ -1,0 +1,20 @@
+@media (min-width: 668px) and (max-width: 768px) {
+
+    @import '../mobile';
+
+    .wrapper {
+        width: 50%;
+        padding-top: 15%;
+        padding-bottom: 15%;
+
+        .content {
+            .third {
+                .social {
+                    float: right;
+                    margin-top: 0;
+                    margin-right: -100px;
+                }
+            }
+        }
+    }
+}

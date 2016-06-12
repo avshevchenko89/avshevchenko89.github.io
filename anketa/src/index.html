@@ -32,9 +32,10 @@
                 <h1>2. Выберите страну и город</h1>
 
                 <form action="#" method="post">
-                    <select name="country" id="country">
+                    <select name="country" id="country" required>
                         <option value="country" selected disabled>Страна</option>
                     </select>
+                    <span class="alert alert-country">Выберите страну из списка.</span>
                     <select name="city" id="city">
                         <option value="city" selected disabled>Город</option>
                     </select>
@@ -44,19 +45,35 @@
                 <h1>3. Отметьте социальные сети</h1>
 
                 <form action="#" method="post">
-                    <div><input type="checkbox" id="fb"><label for="fb">Facebook</label></div>
-                    <div><input type="checkbox" id="vk"><label for="vk">Вконтакте</label></div>
-                    <div><input type="checkbox" id="tw"><label for="tw">Twitter</label></div>
-                    <div><input type="checkbox"id="od"><label for="od">Одноклассники</label></div>
+                    <div>
+                        <input type="checkbox" id="fb">
+                        <label for="fb">Facebook</label>
+                        <input type="text" placeholder="Ваша страница в Facebook" class="social"/>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="vk">
+                        <label for="vk">Вконтакте</label>
+                        <input type="text" placeholder="Ваша страница в Вконтакте" id="vkontakte" class="social"/>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="tw">
+                        <label for="tw">Twitter</label>
+                        <input type="text" placeholder="Ваша страница в Twitter" id="twitter" class="social"/>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="od">
+                        <label for="od">Одноклассники</label>
+                        <input type="text" placeholder="Ваша страница в Одноклассники" id="odnoclassniki" class="social"/>
+                    </div>
                 </form>
             </div>
             <div class="step fourth">
                 <h1>4. Выберите любимого котика</h1>
                 <div class="images">
-                    <img src="img/cat1.jpg" alt="cat1" class="cat">
-                    <img src="img/cat2.jpg" alt="cat2" class="cat">
-                    <img src="img/cat3.jpg" alt="cat3" class="cat">
-                    <img src="img/dog4.jpg" alt="dog"/>
+                    <img src="img/cat1.jpg" alt="cat1" class="img cat" id="cat1">
+                    <img src="img/cat2.jpg" alt="cat2" class="img cat" id="cat2">
+                    <img src="img/cat3.jpg" alt="cat3" class="img cat" id="cat3">
+                    <img src="img/dog4.jpg" alt="img dog"/>
                 </div>
             </div>
         </div>
@@ -66,5 +83,8 @@
             <button class="next">Следующий ></button>
         </div>
     </div>
+<div class="results">
+
+</div>
 </body>
 </html>

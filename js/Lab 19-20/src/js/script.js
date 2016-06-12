@@ -1,5 +1,6 @@
+
+
 $(function () {
-//-69 -45 -21
     var $carousel = $('.carousel');
     var $blockWidth = $($carousel).find('.carousel__block').css('width');
     var $currentLeft= -69;
@@ -61,4 +62,7 @@ $(function () {
                 $flag = false;
             }
         });
+
 });
+
+
