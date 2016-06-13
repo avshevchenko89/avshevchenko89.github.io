@@ -37,6 +37,7 @@ $(function () {
     //variables
     var $prevButton = $('.prev');
     var $nextButton = $('.next');
+    $('.first').addClass('current-step');
     var anketa = new Anketa('.content');
     anketa.start();
     var $flag,
@@ -47,18 +48,22 @@ $(function () {
         if ($('.current-step').hasClass('first')) {
             return;
         } else {
+            $flag = false;
             $('.current-step').removeClass('current-step').prev().addClass('current-step');
+            $('.current-page').removeClass('current-page').prev().removeClass('passed-page').addClass('current-page');
             anketa.start();
         }
     });
 
-    $nextButton.on('click', function () {
-        console.log($flag);
+    $nextButton.on('click', function (e) {
+        e.preventDefault();
+
         if ($flag) {
             if ($('.current-step').hasClass('fourth')) {
                 anketa.showResult();
             } else {
                 $('.current-step').removeClass('current-step').next().addClass('current-step');
+                $('.current-page').removeClass('current-page').addClass('passed-page').next().addClass('current-page');
                 if ($('.current-step').hasClass('three')) {
                     $nextButton.html('Завершить');
                     $nextButton.addClass('finish');
@@ -68,8 +73,42 @@ $(function () {
         }
     });
 
+    $('.page').on('click', function (e) {
+        var $target = e.target;
+
+        switch ($($target).html()) {
+            case '2':
+                if ($($target).prev().hasClass('passed-page')) {
+                    $('.step').hide();
+                    $('.second').show();
+                    anketa.start();
+                } else return;
+                break;
+            case '3':
+                if ($($target).prev().hasClass('passed-page')) {
+                    $('.step').hide();
+                    $('.third').show();
+                    $('.next').removeClass('finish').html('Следующий >');
+                    anketa.start();
+                } else return;
+                break;
+            case '4':
+                if ($($target).prev().hasClass('passed-page')) {
+                    $('.step').hide();
+                    $('.fourth').show();
+                    anketa.start();
+                } else return;
+                break;
+            default:
+                $('.step').hide();
+                $('.first').show();
+                anketa.start();
+        }
+    });
+
     //constructor
     function Anketa(elem) {
+
         localStorage.clear();
         $('.alert').hide();
 
@@ -83,7 +122,7 @@ $(function () {
                 $('.name').css({'border': '0'});
                 $('.alert-name').hide();
             }
-  /*          return $flag;*/
+            /*          return $flag;*/
         }
 
         function emailCheck(mail) {
@@ -108,7 +147,7 @@ $(function () {
                     $flag = false;
                 }
             }
-/*            return $flag;*/
+            /*            return $flag;*/
         }
 
         function selectLocation() {
@@ -163,9 +202,11 @@ $(function () {
             } else {
                 $('#country').css({'border': '0'});
                 $('.alert-country').hide();
+                if ($('#city').val() == null) {
+                    localStorage.setItem('city', 'Город');
+                }
                 $flag = true;
             }
-            return $flag;
         }
 
         function socialInput(target) {
@@ -219,60 +260,65 @@ $(function () {
         }
 
         function imgCheck() {
-            console.log(img);
-            console.log(!$(img).hasClass('cat'));
             if ($(img).hasClass('dog')) {
-                console.log('dog');
                 $('.alert').show();
                 $flag = false;
                 $('img').css({'border': '0'});
             } else {
                 $('.alert').hide();
-                var pic = $(img).attr('id');
-                localStorage.setItem('pic', pic);
+                var picId = $(img).attr('id');
+                console.log(picId);
+                localStorage.setItem('picId', picId);
             }
         }
 
         this.start = function () {
-            $flag = false;
+            //check the current__step
             var $current = $('.current-step');
-            console.log($current);
+
+            //check what to do according to actual step
             if ($($current).hasClass('first')) {
+                console.log($current);
                 console.log('first');
                 $nextButton.on('click', function () {
                     var $name = $('.name').val();
                     nameCheck($name);
-
                     var $email = $('.email').val();
                     emailCheck($email);
-
                     localStorage.setItem('name', $name);
                     localStorage.setItem('email', $email);
                 })
-            } else if ($($current).hasClass('second')) {
+            }
+
+            if ($($current).hasClass('second')) {
+                console.log($current);
                 console.log('second');
                 selectLocation();
                 $nextButton.on('click', function () {
+                    $flag = false;
                     locationCheck();
-                });
-                //return $flag;
-            }
-            else if ($($current).hasClass('third')) {
+                })
+            };
+
+            if ($($current).hasClass('third')) {
                 console.log('three');
                 socialInput($('.third'));
                 $nextButton.on('click', function () {
                     socialInputCheck($('.third'));
                 });
-            } else if ($($current).hasClass('fourth')) {
+            };
+
+            if ($($current).hasClass('fourth')) {
                 console.log('four');
                 imgChoose();
                 $nextButton.on('click', function () {
                     imgCheck();
                 });
-            }
+            };
         };
 
         this.reset = function () {
+            console.log('reset');
             $flag = false;
             localStorage.clear();
             $('.step').hide().removeClass('current-step');
@@ -280,31 +326,38 @@ $(function () {
         };
 
         this.showResult = function () {
-            var result = {};
-            result.name = localStorage.getItem('name');
-            result.email = localStorage.getItem('email');
-            result.country = localStorage.getItem('country');
-            result.city = localStorage.getItem('city');
-            result.social = [];
+            var $result = {};
+                $result.name = localStorage.getItem('name');
+                $result.email = localStorage.getItem('email');
+                $result.country = localStorage.getItem('country');
+                $result.city = localStorage.getItem('city');
+                $result.social = [];
             var checked = $('.third').find('input:checked');
             for (var i = 0; i < checked.length; i++) {
                 var id = $(checked[i]).attr('id');
-                result.social[i] = localStorage.getItem(id);
+                $result.social[i] = localStorage.getItem(id);
             }
-            result.pic = localStorage.getItem('pic');
-            console.log(result);
+            $result.pic = localStorage.getItem('picId');
+            console.log($result);
             $('.wrapper').hide();
-            $('.result').show();
+            $('.results').css({'display': 'block'});
             var $profile = $('<div class="profile"></div>');
-            $('.result').append($profile);
-            var $name = $('<h1 class="name">' + result.name + '</h1>');
-            var $email = $('<h2 class="email">' +result.email + '</h2>');
-            var $location = $('<h2 class="location">' + result.city + ', ' + result.country + '</h2>')
+            $('.results').append($profile);
 
-            $profile.append($name);
-            $profile.append($email);
-            $profile.append($location)
+            $profile.append($('<h1 class="name">' + $result.name + '</h1>'));
+            $profile.append($('<p class="email">' + $result.email + '</p>'));
+            $profile.append($('<p class="location">' + $result.city + ', ' + $result.country + '</p>'));
 
+            for (var i = 0; i<$result.social.length; i++) {
+                $profile.append($('<p>'+ '<span>' + $(checked[i]).attr('id') + ': </span>' + $result.social[i] + '<p>'));
+            }
+
+            $profile.append($('<img src="img/' + localStorage.getItem('picId') +'.png" class="pic">'));
+            var $reset = $('<button>Пройти заново</button>');
+            $reset.addClass('finish');
+            $reset.on('click', this.reset());
+
+            $('.results').append($reset);
         };
     }
 
