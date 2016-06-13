@@ -234,7 +234,9 @@ table {
         color: #fff; }
 
   .results {
-    display: none; } }
+    display: none; }
+    .results .profile {
+      background: #fff; } }
 @media (min-width: 415px) and (max-width: 667px) {
   body {
     background: #f5f5f5; }
@@ -348,6 +350,8 @@ table {
 
   .results {
     display: none; }
+    .results .profile {
+      background: #fff; }
 
   .wrapper {
     width: 60%;
@@ -470,6 +474,8 @@ table {
 
   .results {
     display: none; }
+    .results .profile {
+      background: #fff; }
 
   .wrapper {
     width: 50%;
@@ -592,6 +598,8 @@ table {
 
   .results {
     display: none; }
+    .results .profile {
+      background: #fff; }
 
   .wrapper {
     width: 70%;
@@ -714,6 +722,8 @@ table {
 
   .results {
     display: none; }
+    .results .profile {
+      background: #fff; }
 
   .wrapper {
     width: 55%;

@@ -39,36 +39,38 @@ $(function () {
     var $nextButton = $('.next');
     var anketa = new Anketa('.content');
     anketa.start();
-    var $flag;
+    var $flag,
+        img;
 
     //controlButtons
     $prevButton.on('click', function () {
-        console.log($('.current-step'));
-        if (!($('.current-step').hasClass('.first'))) {
-            $('.current-step').removeClass('current-step').hide().prev().show().addClass('current-step');
-            $('.current-page').removeClass('current-page').prev().removeClass('passed-page').addClass('current-page');
+        if ($('.current-step').hasClass('first')) {
+            return;
+        } else {
+            $('.current-step').removeClass('current-step').prev().addClass('current-step');
             anketa.start();
         }
     });
 
     $nextButton.on('click', function () {
+        console.log($flag);
         if ($flag) {
-            console.log($('.current-step'));
-            if (!($('.current-step').hasClass('fourth'))) {
-                if (($('.current-step').hasClass('third'))) {
-                    $nextButton.addClass('finish').html('Завершить');
-                }
-                $('.current-step').removeClass('current-step').hide().next().show().addClass('current-step');
-                $('.current-page').removeClass('current-page').addClass('passed-page').next().addClass('current-page');
-                anketa.start();
-            } else {
+            if ($('.current-step').hasClass('fourth')) {
                 anketa.showResult();
+            } else {
+                $('.current-step').removeClass('current-step').next().addClass('current-step');
+                if ($('.current-step').hasClass('three')) {
+                    $nextButton.html('Завершить');
+                    $nextButton.addClass('finish');
+                }
+                anketa.start();
             }
         }
     });
 
     //constructor
     function Anketa(elem) {
+        localStorage.clear();
         $('.alert').hide();
 
         function nameCheck(name) {
@@ -81,7 +83,7 @@ $(function () {
                 $('.name').css({'border': '0'});
                 $('.alert-name').hide();
             }
-            return $flag;
+  /*          return $flag;*/
         }
 
         function emailCheck(mail) {
@@ -106,7 +108,7 @@ $(function () {
                     $flag = false;
                 }
             }
-            return $flag;
+/*            return $flag;*/
         }
 
         function selectLocation() {
@@ -163,7 +165,7 @@ $(function () {
                 $('.alert-country').hide();
                 $flag = true;
             }
-            /*return $flag;*/
+            return $flag;
         }
 
         function socialInput(target) {
@@ -210,11 +212,25 @@ $(function () {
         }
 
         function imgChoose() {
-
+            $('img').on('click', function () {
+                $(this).css({'border': '2px solid #ff9800'});
+                img = this;
+            });
         }
 
         function imgCheck() {
-
+            console.log(img);
+            console.log(!$(img).hasClass('cat'));
+            if ($(img).hasClass('dog')) {
+                console.log('dog');
+                $('.alert').show();
+                $flag = false;
+                $('img').css({'border': '0'});
+            } else {
+                $('.alert').hide();
+                var pic = $(img).attr('id');
+                localStorage.setItem('pic', pic);
+            }
         }
 
         this.start = function () {
@@ -232,17 +248,16 @@ $(function () {
 
                     localStorage.setItem('name', $name);
                     localStorage.setItem('email', $email);
-                });
+                })
             } else if ($($current).hasClass('second')) {
                 console.log('second');
                 selectLocation();
-
                 $nextButton.on('click', function () {
                     locationCheck();
-                    console.log(localStorage.getItem('country'));
-                    console.log(localStorage.getItem('city'));
                 });
-            } else if ($($current).hasClass('third')) {
+                //return $flag;
+            }
+            else if ($($current).hasClass('third')) {
                 console.log('three');
                 socialInput($('.third'));
                 $nextButton.on('click', function () {
@@ -276,8 +291,20 @@ $(function () {
                 var id = $(checked[i]).attr('id');
                 result.social[i] = localStorage.getItem(id);
             }
+            result.pic = localStorage.getItem('pic');
             console.log(result);
-            return result;
+            $('.wrapper').hide();
+            $('.result').show();
+            var $profile = $('<div class="profile"></div>');
+            $('.result').append($profile);
+            var $name = $('<h1 class="name">' + result.name + '</h1>');
+            var $email = $('<h2 class="email">' +result.email + '</h2>');
+            var $location = $('<h2 class="location">' + result.city + ', ' + result.country + '</h2>')
+
+            $profile.append($name);
+            $profile.append($email);
+            $profile.append($location)
+
         };
     }
 
