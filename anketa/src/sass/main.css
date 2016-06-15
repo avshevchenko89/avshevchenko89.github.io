@@ -211,8 +211,6 @@ table {
         margin-top: 5px; }
     .wrapper .content .fourth {
       margin: 0 auto 100px; }
-      .wrapper .content .fourth .chosen {
-        border: 3px solid #ff9800; }
     .wrapper .buttons {
       width: 276px;
       height: 40px;
@@ -239,7 +237,7 @@ table {
     display: none; }
     .results .profile {
       width: 100%;
-      height: 243px;
+      height: 450px;
       background: #fff;
       padding: 24px; }
       .results .profile .profile-wrapper {
@@ -259,8 +257,7 @@ table {
           text-transform: capitalize; }
       .results .profile .pic {
         width: 200px;
-        height: 195px;
-        float: right; }
+        height: 195px; }
     .results button {
       background: #ff9800;
       display: block;
@@ -358,8 +355,6 @@ table {
         margin-top: 5px; }
     .wrapper .content .fourth {
       margin: 0 auto 100px; }
-      .wrapper .content .fourth .chosen {
-        border: 3px solid #ff9800; }
     .wrapper .buttons {
       width: 276px;
       height: 40px;
@@ -386,7 +381,7 @@ table {
     display: none; }
     .results .profile {
       width: 100%;
-      height: 243px;
+      height: 450px;
       background: #fff;
       padding: 24px; }
       .results .profile .profile-wrapper {
@@ -406,8 +401,7 @@ table {
           text-transform: capitalize; }
       .results .profile .pic {
         width: 200px;
-        height: 195px;
-        float: right; }
+        height: 195px; }
     .results button {
       background: #ff9800;
       display: block;
@@ -427,9 +421,13 @@ table {
       margin-right: -100px; }
 
   .results {
-    width: 75%;
+    width: 86%;
     margin: 0 auto;
-    padding-top: 10%; } }
+    padding-top: 10%; }
+    .results .profile {
+      height: 243px; }
+      .results .profile .pic {
+        float: right; } }
 @media (min-width: 668px) and (max-width: 768px) {
   body {
     background: #f5f5f5; }
@@ -519,8 +517,6 @@ table {
         margin-top: 5px; }
     .wrapper .content .fourth {
       margin: 0 auto 100px; }
-      .wrapper .content .fourth .chosen {
-        border: 3px solid #ff9800; }
     .wrapper .buttons {
       width: 276px;
       height: 40px;
@@ -547,7 +543,7 @@ table {
     display: none; }
     .results .profile {
       width: 100%;
-      height: 243px;
+      height: 450px;
       background: #fff;
       padding: 24px; }
       .results .profile .profile-wrapper {
@@ -567,8 +563,7 @@ table {
           text-transform: capitalize; }
       .results .profile .pic {
         width: 200px;
-        height: 195px;
-        float: right; }
+        height: 195px; }
     .results button {
       background: #ff9800;
       display: block;
@@ -588,9 +583,13 @@ table {
       margin-right: -100px; }
 
   .results {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
-    padding-top: 20%; } }
+    padding-top: 20%; }
+    .results .profile {
+      height: 243px; }
+      .results .profile .pic {
+        float: right; } }
 @media (min-width: 769px) and (max-width: 1024px) {
   body {
     background: #f5f5f5; }
@@ -680,8 +679,6 @@ table {
         margin-top: 5px; }
     .wrapper .content .fourth {
       margin: 0 auto 100px; }
-      .wrapper .content .fourth .chosen {
-        border: 3px solid #ff9800; }
     .wrapper .buttons {
       width: 276px;
       height: 40px;
@@ -708,7 +705,7 @@ table {
     display: none; }
     .results .profile {
       width: 100%;
-      height: 243px;
+      height: 450px;
       background: #fff;
       padding: 24px; }
       .results .profile .profile-wrapper {
@@ -728,8 +725,7 @@ table {
           text-transform: capitalize; }
       .results .profile .pic {
         width: 200px;
-        height: 195px;
-        float: right; }
+        height: 195px; }
     .results button {
       background: #ff9800;
       display: block;
@@ -749,9 +745,13 @@ table {
       margin-right: -100px; }
 
   .results {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
-    padding-top: 20%; } }
+    padding-top: 20%; }
+    .results .profile {
+      height: 243px; }
+      .results .profile .pic {
+        float: right; } }
 @media (min-width: 1025px) {
   body {
     background: #f5f5f5; }
@@ -841,8 +841,6 @@ table {
         margin-top: 5px; }
     .wrapper .content .fourth {
       margin: 0 auto 100px; }
-      .wrapper .content .fourth .chosen {
-        border: 3px solid #ff9800; }
     .wrapper .buttons {
       width: 276px;
       height: 40px;
@@ -869,7 +867,7 @@ table {
     display: none; }
     .results .profile {
       width: 100%;
-      height: 243px;
+      height: 450px;
       background: #fff;
       padding: 24px; }
       .results .profile .profile-wrapper {
@@ -889,8 +887,7 @@ table {
           text-transform: capitalize; }
       .results .profile .pic {
         width: 200px;
-        height: 195px;
-        float: right; }
+        height: 195px; }
     .results button {
       background: #ff9800;
       display: block;
@@ -912,6 +909,10 @@ table {
   .results {
     width: 50%;
     margin: 0 auto;
-    padding-top: 10%; } }
+    padding-top: 10%; }
+    .results .profile {
+      height: 243px; }
+      .results .profile .pic {
+        float: right; } }
 
 /*# sourceMappingURL=main.css.map */

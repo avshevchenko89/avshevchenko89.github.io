@@ -19,8 +19,16 @@
     }
 
     .results {
-        width: 75%;
+        width: 86%;
         margin: 0 auto;
         padding-top: 10%;
+
+        .profile {
+            height: 243px;
+
+            .pic {
+                float: right;
+            }
+        }
     }
 }

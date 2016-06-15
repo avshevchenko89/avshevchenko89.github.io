@@ -278,9 +278,10 @@ $(function () {
         }
 
         function imgChoose() {
-            $('img').removeClass('chosen');
+            $('img').css({'border': 0});
             $('img').on('click', function () {
-                $(this).addClass('chosen');
+                $('img').css({'border': 0});
+                $(this).css({'border': '3px solid #ff9800'}).addClass('chosen');
                 img = this;
             });
         }
@@ -290,7 +291,7 @@ $(function () {
             if ($('.chosen').length == 0) return false;
             if ($(img).hasClass('dog')) {
                 $('.pic-alert').show();
-                $('img').removeClass('chosen');
+                $('img').removeClass('chosen').css({'border': 0});
                 return false;
             } else {
                 $('.pic-alert').hide();
