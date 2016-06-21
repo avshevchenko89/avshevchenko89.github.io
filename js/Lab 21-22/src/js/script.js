@@ -1,10 +1,26 @@
 $(function() {
     localStorage.setItem('test', JSON.stringify(database));
     let $data = JSON.parse(localStorage.getItem('test'));
+    console.log($data);
 
-    let $html = $('#test').html();
-    let $content = tmpl($html, $data);
-    $('.wrapper').append($content);
+    let wrapper = $('<div class="wrapper">');
+    wrapper.append($(`<h1>${$data.header}</h1>`));
+    wrapper.append($('<form>'));
+    for (let i = 0; i < $data.questions.length; i++) {
+        let question = $('<div class="question">');
+        question.append($(`<p>${$data.questions[i].title}</p>`));
+        for (let j = 0; j < $data.questions[i].answers.length; j++) {
+            let answer = $('<div class="answer">');
+            answer.append(`<input type="radio" name="${$data.questions[i].radioname}" id="${$data.questions[i].id[j]}">`);
+            answer.append(`<label for="${$data.questions[i].id[j]}">${$data.questions[i].answers[j]}</label>`);
+            question.append(answer);
+        }
+        wrapper.append(question);
+    }
+
+    wrapper.append($(`<button>${$data.submit}</button>`));
+
+    $('body').append(wrapper);
 
     function showModal(e) {
         e.preventDefault();

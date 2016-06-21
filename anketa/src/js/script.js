@@ -87,7 +87,7 @@ $(function () {
         }
     });
 
-    //paginator*****************************************************************
+    //paginator
     $('.page').on('click', function (e) {
         var $target = e.target;
         debugger;
@@ -416,5 +416,4 @@ $(function () {
             })
         };
     }
-
 });

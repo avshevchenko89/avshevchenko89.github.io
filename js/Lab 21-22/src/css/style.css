@@ -13,17 +13,21 @@ h1 {
     text-align: center;
 }
 
-form>div {
-    padding: 10px;
+.answer {
+    padding: 3px 0;
 }
 
 p {
-    padding-bottom: 10px;
+    padding: 10px 0;
     font-size: 20px;
 }
 
 input {
     margin-left: 20px;
+}
+
+label {
+    margin-left: 10px;
 }
 
 button {
