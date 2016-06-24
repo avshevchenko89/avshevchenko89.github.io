@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Require.js and MVC</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script data-main="js/app" src="js/require.js"></script>
+</head>
+<body>
+<script type="text/template" id="wrapper-template">
+<div class="wrapper">
+    <ul class="list"></ul>
+    <div class="item-add">
+        <input type="text" class="item-add__value"/>
+        <button class="item-add__button">Add</button>
+    </div>
+</div>
+</script>
+<script type="text/template" id="list-template">
+    <% for (var i = 0; i < data.length; i++) { %>
+    <li class="list__item">
+        <%= data[i] %>
+        <div class="list__item__control">
+            <button data-value="<%= data[i] %>" class="list__item__control__button list__item__control__button--edit">Edit</button>
+            <button data-value="<%= data[i] %>" class="list__item__control__button list__item__control__button--delete">Delete</button>
+        </div>
+    </li>
+    <% }; %>
+</script>
+</body>
+</html>

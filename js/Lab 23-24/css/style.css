@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 20px 40px;
+    background: #fdff9f;
+    border-radius: 10px;
+}
+
+.list {
+    padding-left: 0;
+}
+
+.list__item {
+    width: 100%;
+    display: block;
+    float: left;
+    color: #b33aff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 30px;
+    list-style: none;
+}
+
+.list__item__control {
+    float: right;
+}
+
+.list__item__control__button,
+.item-add__button {
+    padding: 5px 10px;
+    background: #b33aff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.item-add__value {
+    width: 60%;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid #b33aff;
+}
+
+
