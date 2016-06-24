@@ -1,6 +1,7 @@
 
 
 $(function () {
+    //carousel
     var $carousel = $('.carousel');
     var $blockWidth = $($carousel).find('.carousel__block').css('width');
     var $currentLeft= -69;
@@ -41,6 +42,7 @@ $(function () {
         $(this).removeClass('hover');
     });
 
+    //accorderon
     var $flag = false;
 
     $('.banner__toggle').on('click', function() {
