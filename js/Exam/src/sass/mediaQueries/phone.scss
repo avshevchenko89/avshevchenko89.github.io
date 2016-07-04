@@ -1,0 +1,8 @@
+@media (max-width: 667px) {
+
+    @import '../mobile';
+
+    .wrapper {
+        min-width: 320px;
+    }
+}

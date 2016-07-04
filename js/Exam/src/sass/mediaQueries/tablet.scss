@@ -1,0 +1,145 @@
+@media (min-width: 668px) and (max-width: 1024px) {
+
+  @import '../desktop';
+
+  .promo__header__connect {
+    margin-right: 6.1%;
+  }
+
+  .promo__header__title {
+    margin-left: 6.5%;
+  }
+
+  .promo__info__title {
+    margin: 0 18%;
+  }
+
+  .promo__info__text {
+    margin: 3.8% 15% 1.8%;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .about__title {
+    margin-left: 8px;
+  }
+
+  .about__desktop {
+    max-width: 753px;
+    margin: 0 auto;
+  }
+
+  .about__list {
+    width: 97.5%;
+    margin: 0 1% 0 1.5%;
+  }
+
+  .about__item {
+    width: 31.6%;
+    height: 100%;
+    margin-right: 2.6%;
+  }
+
+  .carousel-block {
+    max-width: 239px;
+  }
+
+  .carousel-block img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .carousel-button-left a,
+  .carousel-button-right a {
+    top: 40px;
+  }
+
+  .about__item__wrapper {
+    padding-top: 211px;
+    padding-right: 8.5%;
+    padding-bottom: 20px;
+    padding-left: 8.5%;
+  }
+
+  .about__item__num--second {
+    margin-top: 47px;
+  }
+
+  .about__item__title {
+    margin-bottom: 14px;
+  }
+
+  .about__item__text {
+    max-width: 205px;
+  }
+
+  .carousel-button-left--second a {
+    left: 12px
+  }
+
+  .carousel-button-right--second a {
+    right: 12px;
+  }
+
+  .partners {
+    width: 100%;
+    height: 725px;
+  }
+
+  .partners__list {
+    max-height: 530px;
+    margin-right: 16.5%;
+    margin-left: 17%;
+  }
+
+  .partners__item {
+    width: 50%;
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
+
+  .partners__item__text {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .ideas {
+    width: 97.5%;
+    height: 1030px;
+    margin: 0 auto 12.5%;
+  }
+
+  .grid-sizer {
+    width: 31.6%;
+  }
+
+  .gutter-sizer {
+    width: 2.6%;
+  }
+
+  .grid-item {
+    width: 31.6%;
+    margin-bottom: 20px;
+  }
+
+  .search__field {
+    width: 35.5%;
+    margin-right: 1%;
+  }
+
+  .search__button {
+    padding: 0 3.5%;
+  }
+
+  .footer__block {
+    margin: 0 5%;
+    padding-top: 39px;
+  }
+
+  .footer__company {
+    margin: 0 15% 0 12%;
+  }
+
+}
