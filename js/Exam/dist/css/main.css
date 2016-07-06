@@ -329,9 +329,8 @@ table {
     outline: 0; }
   .ideas {
     width: 94%;
-    height: 964px;
-    margin: 39px auto;
-    overflow: hidden; }
+    /*height: 964px;*/
+    margin: 39px auto; }
   .ideas__title {
     color: #333;
     margin: 0 13px 14px;
@@ -687,9 +686,8 @@ table {
     outline: 0; }
   .ideas {
     width: 940px;
-    height: 1029px;
-    margin: 100px auto 97px;
-    overflow: hidden; }
+    /*height: 1029px;*/
+    margin: 100px auto 97px; }
   .ideas__title {
     color: #333;
     margin: 0 13px 35px;
@@ -873,7 +871,7 @@ table {
     margin: 0 auto; }
   .ideas {
     width: 97.5%;
-    height: 1030px;
+    /*height: 1030px;*/
     margin: 0 auto 12.5%; }
   .grid-sizer {
     width: 31.6%; }
@@ -1124,7 +1122,7 @@ table {
     outline: 0; }
   .ideas {
     width: 940px;
-    height: 1029px;
+    /*height: 1029px;*/
     margin: 100px auto 97px;
     overflow: hidden; }
   .ideas__title {
