@@ -1,9 +1,12 @@
 $(function () {
 
-        $('.carousel').carousel();
+        $('.bxslider').bxSlider({
+            auto: false,
+            autoControls: true
+        });
 
         function grid() {
-            var $grid = $('.grid').imagesLoaded( function() {
+            var $grid = $('.grid').imagesLoaded(function () {
                 $grid.masonry({
                     itemSelector: '.grid-item',
                     columnWidth: '.grid-sizer',
@@ -41,5 +44,4 @@ $(function () {
             $('.search__field').val('');
         })
     }
-)
-;
+);

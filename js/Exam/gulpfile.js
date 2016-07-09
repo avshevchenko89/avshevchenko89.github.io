@@ -67,7 +67,7 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
         .pipe(sourcemaps.init())
-        .pipe(concat('script.min.js'))
+       .pipe(concat('script.min.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.dist.js))

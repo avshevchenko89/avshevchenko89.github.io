@@ -35,53 +35,6 @@
   margin-right: 0;
 }
 
-.carousel-wrapper {
-  position:relative;
-  overflow: hidden;
-}
-
-.carousel-items {
-  width: 10000px;
-  position: relative;
-}
-
-.carousel-block {
-  width: 300px;
-  float: left;
-  position: relative;
-}
-
-.carousel-block img {
-  display:block;
-}
-
-.carousel-button-left,
-.carousel-button-right {
-  position: relative;
-}
-
-.carousel-button-left a,
-.carousel-button-right a {
-  width: 30px;
-  height: 55px;
-  position: absolute;
-  top: 152px;
-  text-decoration:none;
-  z-index: 10;
-}
-
-.carousel-button-left a{
-  float: left;
-  left: 20px;
-  background: url("../img/left.png");
-}
-
-.carousel-button-right a{
-  float: right;
-  right: 20px;
-  background: url("../img/right.png");
-}
-
 .about__item__wrapper {
   position: absolute;
   top: 0;
