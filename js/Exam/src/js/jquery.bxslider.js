@@ -186,7 +186,7 @@
 			el.wrap('<div class="' + slider.settings.wrapperClass + '"><div class="bx-viewport"></div></div>');
 			// store a namspace reference to .bx-viewport
 			slider.viewport = el.parent();
-			// add a loading div to display while images are loading
+			// add a loading div to display while img are loading
 			slider.loader = $('<div class="bx-loading" />');
 			slider.viewport.prepend(slider.loader);
 			// set el to a massive width, to hold any needed slides
@@ -264,7 +264,7 @@
 			}else{
 				slider.settings.pager = false;
 			}
-			// preload all images, then perform final DOM / CSS modifications that depend on images being loaded
+			// preload all img, then perform final DOM / CSS modifications that depend on img being loaded
 			loadElements(preloadSelector, start);
 		}
 
