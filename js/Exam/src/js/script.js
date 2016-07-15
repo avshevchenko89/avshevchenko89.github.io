@@ -26,7 +26,7 @@ $(function () {
                 url: 'https://pixabay.com/api/?key=2650584-e8feab9b11ed644dcec728ac9&q=' + $searchKey + '&image_type=photo',
                 dataType: 'jsonp',
                 success: function (data) {
-                    console.log(data);
+
                     var $html = $('#container').html();
                     var $content = tmpl($html, data);
                     $('.ideas').append($content);
