@@ -1,14 +1,14 @@
 .partners {
-  width: 63.5%;
-  height: 367px;
+  width: 87.5%;
+  height: 1052px;
   margin: 0 auto;
   font-family: Montserrat;
   text-align: center;
 }
 
 .partners__title {
-  margin-left: -3px;
-  margin-bottom: 32px;
+  margin-top: -2px;
+  margin-left: -5px;
   color: $color5;
   font-size: 22px;
   font-weight: 700;
@@ -16,19 +16,14 @@
   text-align: center;
 }
 
+
+
 .partners__list {
-  max-height: 271px;
-  height: 100%;
+  margin-top: 15px;
 }
 
 .partners__item {
-  width: 21.4%;
-  float: left;
-  margin-right: 4.8%;
-}
-
-.partners__item:last-child {
-  margin-right: 0;
+  margin-bottom: 29px;
 }
 
 .partners__item__img {
@@ -58,27 +53,10 @@
 }
 
 .partners__item__symbol {
-  width: 37px;
-  height: 37px;
   display: inline-block;
   margin-left: -40px;
 }
 
-.partners__item__symbol--tv {
-  background: url("../img/img1.png");
-}
-
-.partners__item__symbol--coffe {
-  background: url("../img/img2.png");
-}
-
-.partners__item__symbol--chem {
-  background: url("../img/img3.png");
-}
-
-.partners__item__symbol--plane {
-  background: url("../img/img4.png");
-}
 
 .partners__item__title {
   margin: 15px auto;
@@ -86,6 +64,8 @@
 }
 
 .partners__item__text {
+  width: 77%;
+  margin: 0 auto;
   color: $color8;
   font-family: Roboto;
   font-size: 14px;
@@ -93,14 +73,13 @@
 }
 
 .partners__other {
-  clear: both;
-  padding: 10px 29px;
   background: $color2;
   border: 2px solid $color3;
   border-radius: 30px;
   color: $color3;
   cursor: pointer;
   font-size: 14px;
+  padding: 10px 72px;
   &:hover {
     border-color: $color5;
     color: $color5;

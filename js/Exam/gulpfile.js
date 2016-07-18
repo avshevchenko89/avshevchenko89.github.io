@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
+    spritesmith = require('gulp.spritesmith'),
     reload = browserSync.reload;
 
 var path = {
@@ -20,21 +21,23 @@ var path = {
         js: 'dist/js/',
         css: 'dist/css/',
         img: 'dist/img/',
-        fonts: 'dist/fonts/'
+        fonts: 'dist/fonts/',
     },
     src: {
         html: 'src/*.html',
         js: 'src/js/*.js',
-        style: ['src/sass/main.scss', 'src/sass/ie8.scss'],
+        style: ['src/scss/main.scss', 'src/scss/ie8.scss'],
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/*.*'
+        fonts: 'src/fonts/*.*',
+        sprite: 'src/img/sprite/*.*'
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/*.js',
-        style: 'src/sass/**/*.scss',
+        style: 'src/scss/**/*.scss',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/*.*'
+        fonts: 'src/fonts/*.*',
+        sprite: 'src/img/sprite/*.*'
     },
     clean: './dist'
 };
@@ -74,7 +77,21 @@ gulp.task('js:build', function () {
         .pipe(reload({stream: true}));
 });
 
+gulp.task('sprite', function () {
+    var spriteData =
+        gulp.src(path.src.sprite)
+            .pipe(spritesmith({
+                imgName: 'sprite.png',
+                cssName: 'sprite.css',
+                imgPath: '../img/sprite.png'
+            }));
+
+    spriteData.img.pipe(gulp.dest('dist/img'));
+    return spriteData.css.pipe(gulp.dest('dist/css/'));
+});
+
 gulp.task('style:build', function () {
+
     gulp.src(path.src.style)
         .pipe(sourcemaps.init())
         .pipe(sass({
@@ -106,12 +123,12 @@ gulp.task('fonts:build', function() {
 
 gulp.task('build', [
     'html:build',
+    'sprite',
     'js:build',
     'style:build',
     'fonts:build',
     'image:build'
 ]);
-
 
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
@@ -128,6 +145,9 @@ gulp.task('watch', function(){
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
+    });
+    watch([path.watch.sprite], function(event, cb) {
+        gulp.start('sprite:build');
     });
 });
 
