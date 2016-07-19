@@ -2,70 +2,73 @@
 
   @import '../desktop';
 
-  .promo__header__connect {
-    margin-right: 6.1%;
+  .promo__header {
+
+    &__connect {
+      margin-right: 6.1%;
+    }
+
+    &__title {
+      margin-left: 6.5%;
+    }
   }
 
-  .promo__header__title {
-    margin-left: 6.5%;
+  .promo__info {
+
+    &__title {
+      margin: 0 18%;
+    }
+
+    &__text {
+      margin: 3.8% 15% 1.8%;
+    }
   }
 
-  .promo__info__title {
-    margin: 0 18%;
-  }
-
-  .promo__info__text {
-    margin: 3.8% 15% 1.8%;
-  }
 
   .about {
     width: 100%;
-  }
 
-  .about__title {
-    margin-left: 8px;
-  }
+    &__title {
+      margin-left: 8px;
+    }
 
-  .about__desktop {
-    max-width: 753px;
-    margin: 0 auto;
-  }
+    &__desktop {
+      max-width: 753px;
+      margin: 0 auto;
+    }
 
-  .about__list {
-    width: 97.5%;
-    margin: 0 1% 0 1.5%;
-  }
+    &__list {
+      width: 97.5%;
+      margin: 0 1% 0 1.5%;
+    }
 
-  .about__item {
-    width: 31.6%;
-    height: 100%;
-    margin-right: 2.6%;
-  }
+    &__item {
+      width: 31.6%;
+      height: 100%;
+      margin-right: 2.6%;
 
-  .bx-viewport {
-    /*min-height: 400px;*/
-  }
+      &__img {
+        min-height: 394px;
+      }
 
-  .about__item__img {
-    min-height: 394px;
-  }
+      &--wrapper {
+        padding-top: 215px;
+        padding-right: 5.5%;
+        padding-left: 5.5%;
+      }
 
-  .about__item__wrapper {
-    padding-top: 215px;
-    padding-right: 5.5%;
-    padding-left: 5.5%;
-  }
+      &__num--second {
+        margin-top: 47px;
+      }
 
-  .about__item__num--second {
-    margin-top: 47px;
-  }
+      &__title {
+        margin-bottom: 14px;
+      }
 
-  .about__item__title {
-    margin-bottom: 14px;
-  }
-
-  .about__item__text {
-    max-width: 205px;
+      &__text {
+        max-width: 205px;
+      }
+    }
   }
 
   .carousel-button-left--second a {
@@ -79,37 +82,29 @@
   .partners {
     width: 100%;
     height: 725px;
-  }
 
-  .partners__list {
-    max-height: 530px;
-    margin-right: 16.5%;
-    margin-left: 17%;
-  }
+    &__list {
+      max-height: 530px;
+      margin-right: 16.5%;
+      margin-left: 17%;
+    }
 
-  .partners__item {
-    width: 50%;
-    margin-right: 0;
-    margin-bottom: 5%;
-  }
+    &__item {
+      width: 50%;
+      margin-right: 0;
+      margin-bottom: 5%;
 
-  .partners__item__text {
-    width: 90%;
-    margin: 0 auto;
+      &__text {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
   }
 
   .ideas {
     width: 97.5%;
     height: inherit;
     margin: 0 auto 12.5%;
-  }
-
-  .grid-sizer {
-    width: 31.6%;
-  }
-
-  .gutter-sizer {
-    width: 2.6%;
   }
 
   .grid-item {
@@ -134,5 +129,4 @@
   .footer__company {
     margin: 0 15% 0 12%;
   }
-
 }

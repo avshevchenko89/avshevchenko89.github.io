@@ -4,88 +4,85 @@
   margin: 0 auto;
   font-family: Montserrat;
   text-align: center;
-}
 
-.partners__title {
-  margin-top: -2px;
-  margin-left: -5px;
-  color: $color5;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
-}
-
-
-
-.partners__list {
-  margin-top: 15px;
-}
-
-.partners__item {
-  margin-bottom: 29px;
-}
-
-.partners__item__img {
-  width: 121px;
-  height: 121px;
-  display: inline-block;
-  margin: 0 auto;
-  border-radius: 100%;
-  background-position: center;
-  background-size: cover;
-}
-
-.partners__item__img--first {
-  background-image: url("../img/partner1.png");
-}
-
-.partners__item__img--second {
-  background-image: url("../img/partner2.png");
-}
-
-.partners__item__img--third {
-  background-image: url("../img/partner3.png");
-}
-
-.partners__item__img--fourth {
-  background-image: url("../img/partner4.png");
-}
-
-.partners__item__symbol {
-  display: inline-block;
-  margin-left: -40px;
-}
-
-
-.partners__item__title {
-  margin: 15px auto;
-  font-size: 14px;
-}
-
-.partners__item__text {
-  width: 77%;
-  margin: 0 auto;
-  color: $color8;
-  font-family: Roboto;
-  font-size: 14px;
-  line-height: 1.2;
-}
-
-.partners__other {
-  background: $color2;
-  border: 2px solid $color3;
-  border-radius: 30px;
-  color: $color3;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 10px 72px;
-  &:hover {
-    border-color: $color5;
+  &__title {
+    margin-top: -2px;
+    margin-left: -5px;
     color: $color5;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
   }
-}
 
-.partners__other:focus {
-  outline: 0;
+  &__list {
+    margin-top: 15px;
+  }
+
+  &__item {
+    margin-bottom: 29px;
+
+    &__img {
+      width: 121px;
+      height: 121px;
+      display: inline-block;
+      margin: 0 auto;
+      border-radius: 100%;
+      background-position: center;
+      background-size: cover;
+
+      &--first {
+        background-image: url("../img/partner1.png");
+      }
+
+      &--second {
+        background-image: url("../img/partner2.png");
+      }
+
+      &--third {
+        background-image: url("../img/partner3.png");
+      }
+
+      &--fourth {
+        background-image: url("../img/partner4.png");
+      }
+    }
+
+    &__symbol {
+      display: inline-block;
+      margin-left: -40px;
+    }
+
+    &__title {
+      margin: 15px auto;
+      font-size: 14px;
+    }
+
+    &__text {
+      width: 77%;
+      margin: 0 auto;
+      color: $color8;
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+
+  &__button {
+    background: $color2;
+    border: 2px solid $color3;
+    border-radius: 30px;
+    color: $color3;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 72px;
+    &:hover {
+      border-color: $color5;
+      color: $color5;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
 }

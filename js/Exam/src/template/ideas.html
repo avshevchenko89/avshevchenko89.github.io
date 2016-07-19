@@ -6,8 +6,8 @@
         <div class="grid">
             <% for (var i = 0; i < 10; i++) { %>
             <figure class="grid-item">
-                <img src="<%= hits[i].webformatURL %>" alt="picture" class="ideas__pic__img"/>
-                <figcaption class="ideas__pic__title"><%= hits[i].tags.split(', ')[1] %></figcaption>
+                <img src="<%= hits[i].webformatURL %>" alt="picture" class="ideas__img"/>
+                <figcaption class="ideas__img--title"><%= hits[i].tags.split(', ')[1] %></figcaption>
             </figure>
             <% } %>
         </div>

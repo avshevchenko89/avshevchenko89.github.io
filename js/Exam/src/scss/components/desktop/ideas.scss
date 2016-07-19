@@ -1,15 +1,33 @@
 .ideas {
   width: 940px;
   margin: 100px auto 97px;
-}
 
-.ideas__title {
-  color: $color5;
-  margin: 0 13px 35px;
-  font-family: Montserrat;
-  font-size: 22px;
-  line-height: 25px;
-  text-align: center;
+  &__title {
+    color: $color5;
+    margin: 0 13px 35px;
+    font-family: Montserrat;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &--title {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      color: $color2;
+      font-family: Montserrat;
+      font-size: 22px;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
 }
 
 .grid {
@@ -21,20 +39,3 @@
   margin-bottom: 20px;
 }
 
-.ideas__pic__img {
-  max-width: 100%;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.ideas__pic__title {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  color: $color2;
-  font-family: Montserrat;
-  font-size: 22px;
-  text-align: center;
-  text-transform: capitalize;
-}
