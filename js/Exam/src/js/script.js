@@ -1,9 +1,11 @@
 $(function () {
 
-        $('.bxslider').bxSlider({
+        $('.owl-carousel').owlCarousel();
+
+       /* $('.bxslider').bxSlider({
             auto: false,
             autoControls: true
-        });
+        });*/
 
         function grid() {
             var $grid = $('.grid');
