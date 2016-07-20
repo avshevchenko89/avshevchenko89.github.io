@@ -16,8 +16,7 @@
   }
 
   &__list {
-    max-height: 271px;
-    height: 100%;
+    overflow: hidden;
   }
 
   &__item {
@@ -75,6 +74,7 @@
 
   &__button {
     clear: both;
+    margin-top: 22px;
     padding: 10px 29px;
     background: $color2;
     border: 2px solid $color3;
