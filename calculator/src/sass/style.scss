@@ -1,0 +1,87 @@
+.wrapper {
+  width: 348px;
+  height: inherit;
+  margin: 50px auto;
+  border: 2px solid $color4;
+  box-shadow: 3px 3px 10px $color3;
+  color: $color2;
+  font: bold 16px Arial, sans-serif;
+
+  header {
+    width: 100%;
+    padding: 5px;
+    background: $color3;
+    border-bottom: 2px solid $color4;
+    color: $color2;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .calculator {
+    width: 100%;
+    background: $color3;
+    padding: 20px 10px 20px 20px;
+  }
+
+  .top {
+    height: 40px;
+
+    .clear {
+      width: 65px;
+      height: 35px;
+      background: $color4;
+      border-radius: 5px;
+      box-shadow: 0 4px 4px $color5;
+      color: $color1;
+      cursor: pointer;
+      display: inline-block;
+      float: left;
+      line-height: 35px;
+      text-align: center;
+    }
+
+    .screen {
+      width: 218px;
+      height: 38px;
+      background: $color7;
+      border-radius: 5px;
+      box-shadow: inset 0 4px 4px $color9;
+      color: $color1;
+      display: inline-block;
+      margin-left: 20px;
+      line-height: 38px;
+      padding-right: 10px;
+      text-align: right;
+    }
+  }
+
+  .keys {
+    width: 100%;
+    margin-top: 20px;
+
+    span {
+      width: 65px;
+      height: 35px;
+      background: $color1;
+      border-radius: 5px;
+      box-shadow: 0 4px 4px $color9;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      line-height: 35px;
+      text-align: center;
+    }
+
+    .operator {
+      background: $color10;
+      box-shadow: 0 4px 4px $color4;
+    }
+
+    .eval {
+      background: $color6;
+      box-shadow: 0 4px 4px $color8;
+    }
+  }
+
+}
