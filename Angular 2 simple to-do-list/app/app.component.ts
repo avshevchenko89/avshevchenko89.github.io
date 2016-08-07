@@ -7,7 +7,7 @@ import { TodoListComponent } from './to-do-list.component';
 @Component({
     selector: 'my-app',
     template: `
-    <div>
+    <div class="wrapper">
         <h1>To-do List: </h1>
         <to-do-input></to-do-input>
         <to-do-list></to-do-list>

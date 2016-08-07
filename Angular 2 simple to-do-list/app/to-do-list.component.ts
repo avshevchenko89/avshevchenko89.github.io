@@ -1,34 +1,22 @@
 import { Component } from '@angular/core';
 
 import { TodoService } from './todo-service';
-import { TodoModel } from './todo-model';
+import { TodoItemRendererComponent } from './todo-item-renderer.component'
 
 @Component({
     selector: 'to-do-list',
     template: `
-        <ol>
+        <ul>
             <li *ngFor="let todo of todoService.todos">
-                <span [contentEditable]="todo.status === false">{{todo.title}}</span>
-                <button class="edit" (click)="todo.edit()">Edit</button>
-                <button class="remove" (click)="toDelete(todo)">x</button>
+                <todo-item-renderer [todo]="todo"></todo-item-renderer>
             </li>
-        </ol>
+        </ul>
     `,
-    styles: [`
-        .remove {
-            cursor: pointer
-        }
-    `]
+    directives: [TodoItemRendererComponent]
 })
 
 export class TodoListComponent {
-    newTodoValue;
-    selectedTodo: TodoModel;
 
     constructor(public todoService: TodoService) {  }
 
-    toDelete(item) {
-        let index = this.todoService.todos.indexOf(item);
-        this.todoService.todos.splice(index, 1);
-    }
 }

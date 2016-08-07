@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { TodoModel } from './todo-model'
+import { TodoModel } from './todo-model';
 
 @Injectable()
 

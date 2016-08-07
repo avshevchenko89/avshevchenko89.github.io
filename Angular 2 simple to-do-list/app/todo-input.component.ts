@@ -8,7 +8,7 @@ import { TodoModel } from './todo-model';
     template: `
     <div>
         <form (submit)="onSubmit()">
-            <input placeholder="item to do" [(ngModel)]="todoModel.title">
+            <input placeholder="Item to do" [(ngModel)]="todoModel.title">
         </form>
         <button (click)="onClick()">Add</button>
     </div>
