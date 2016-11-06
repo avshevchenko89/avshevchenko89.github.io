@@ -1,0 +1,9 @@
+@import 'reset';
+@import 'variables';
+@import 'mediaQueries/main';
+@import 'carousel-style.scss';
+
+.wrapper {
+  min-width: 668px;
+  font-family: 'Open Sans', sans-serif;
+}

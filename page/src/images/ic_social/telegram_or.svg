@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>telegram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-444.000000, -7829.000000)">
+            <g id="footer" transform="translate(0.000000, 7705.000000)">
+                <g id="Page-1" transform="translate(302.000000, 124.000000)">
+                    <g id="telegram" transform="translate(142.000000, 0.000000)">
+                        <path d="M0,48.0090859 C0,49.1086374 0.889064278,50 1.99091407,50 L48.0090859,50 C49.1086374,50 50,49.1109357 50,48.0090859 L50,1.99091407 C50,0.891362589 49.1109357,0 48.0090859,0 L1.99091407,0 C0.891362589,0 0,0.889064278 0,1.99091407 L0,48.0090859 Z" id="Fill-2" fill="#FF8B00"></path>
+                        <polygon id="Fill-9" fill="#FFFFFF" points="35 15 13.75 22.7265079 20.0088233 26.9992246 26.2138743 23.7038901 22.7172538 29.6831695 27.3968669 36.25"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

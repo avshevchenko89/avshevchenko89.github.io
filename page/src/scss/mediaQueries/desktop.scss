@@ -1,0 +1,41 @@
+@media (min-width: 1025px) and (max-width: 1225px) {
+
+  @import '../desktop';
+
+  header .menu {
+    padding: 0 5%;
+
+    nav {
+      width: 80%;
+    }
+  }
+
+  .technologies div {
+
+    .first {
+      width: 83%;
+    }
+
+    .second {
+      width: 80%;
+    }
+
+    .third {
+      width: 43%;
+    }
+  }
+
+  .price div .column button {
+    width: 70.6%;
+  }
+
+  footer .footer-wrapper {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1226px) {
+
+  @import '../desktop';
+
+}
