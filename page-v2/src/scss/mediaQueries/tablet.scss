@@ -160,11 +160,7 @@
   }
 
   .areas {
-    height: 100vh;
-
-    & > div {
-      height: 65vh;
-
+     & > div {
       .row div {
         width: 15%;
       }
@@ -183,7 +179,9 @@
     }
   }
 
-  .portfolio {
+  .portfolio {  
+    min-height: 760px;
+    height: 100vh;
 
     .slider {
       .dg-container .dg-wrapper {
