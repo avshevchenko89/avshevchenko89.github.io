@@ -2,8 +2,9 @@
 @import 'variables';
 @import 'mediaQueries/main';
 @import 'carousel-style.scss';
+@import 'jquery.bxslider';
 
 .wrapper {
-  min-width: 668px;
+  min-width: 320px;
   font-family: 'Open Sans', sans-serif;
 }

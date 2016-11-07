@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>MVP</title>
 
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
@@ -16,6 +19,7 @@
         <div class="menu">
             <a href=""><img src="images/logo.png" alt="logo"></a>
             <a href=""><img src="images/logo-scroll.png" alt="logo" class="scroll-logo"></a>
+            <img src="images/menu.svg" alt="" class="nav-button">
             <nav>
                 <ul>
                     <li><a href="#about-us">About us</a></li>
@@ -37,7 +41,7 @@
         <div>
             <h2>What is MVP?</h2>
             <p>Building a Minimum Viable Product (MVP) is a strategy for avoiding the development of products that
-                customers do not want. <br> <br> idea is to rapidly build a minimum set of features that is enough to
+                customers do not want. <br> <br> Idea is to rapidly build a minimum set of features that is enough to
                 deploy the product and test key assumptions about customers’ interactions with the product.</p>
             <h3>Want to validate your idea? <br>
                 We can do that in 5 days for $3999"</h3>
@@ -57,7 +61,7 @@
                 <h2>Idea discussion</h2>
             </div>
             <span class="next">&#8250;&#8250;</span>
-            <div>
+            <div class="long">
                 <div class="img-wrapper">
                     <img src="images/ic_process/ic_Specification%20.svg" alt="specification">
                 </div>
@@ -71,7 +75,7 @@
                 <h2>UI/UX</h2>
             </div>
             <span class="next">&#8250;&#8250;</span>
-            <div>
+            <div class="long">
                 <div class="img-wrapper">
                     <img src="images/ic_process/ic_implementation.svg" alt="implementation">
                 </div>
@@ -233,14 +237,48 @@
     </section>
     <section class="portfolio" id="portfolio">
         <h1>Portfolio</h1>
+        <div class="mobile-slider">
+            <ul class="bxslider">
+                <li>
+                    <img src="images/Village.png" alt="Phones">
+                    <h2>TriallValue</h2>
+                    <p>Lucilius instructior concludaturque vis an, vis efficiendi interesset ex, has summo doming
+                        virtute
+                        cu. His ex nostro euismod iudicabit, mei autem petentium deterruisset ea, an sea fugit
+                        habemus
+                        definiebas. Sumo persequeris id est, vim an graeco omittam facilisi.</p>
+                    <button>See details</button>
+                </li>
+                <li>
+                    <img src="images/TrialValue.png" alt="TrialValue">
+                    <h2>TriallValue</h2>
+                    <p>Lucilius instructior concludaturque vis an, vis efficiendi interesset ex, has summo doming
+                        virtute
+                        cu. His ex nostro euismod iudicabit, mei autem petentium deterruisset ea, an sea fugit
+                        habemus
+                        definiebas. Sumo persequeris id est, vim an graeco omittam facilisi.</p>
+                    <button>See details</button>
+                </li>
+                <li>
+                    <img src="images/iMac%20Cloud%20of%20Experts.png" alt="iMac">
+                    <h2>TriallValue</h2>
+                    <p>Lucilius instructior concludaturque vis an, vis efficiendi interesset ex, has summo doming
+                        virtute
+                        cu. His ex nostro euismod iudicabit, mei autem petentium deterruisset ea, an sea fugit
+                        habemus
+                        definiebas. Sumo persequeris id est, vim an graeco omittam facilisi.</p>
+                    <button>See details</button>
+                </li>
+            </ul>
+        </div>
         <div class="slider">
-
             <div class="dg-container">
                 <div class="dg-wrapper">
                     <div>
                         <img src="images/Village.png" alt="Phones">
                         <h2>TriallValue</h2>
-                        <p>Lucilius instructior concludaturque vis an, vis efficiendi interesset ex, has summo doming
+                        <p>Lucilius instructior concludaturque vis an, vis efficiendi interesset ex, has summo
+                            doming
                             virtute
                             cu. His ex nostro euismod iudicabit, mei autem petentium deterruisset ea, an sea fugit
                             habemus
@@ -250,7 +288,8 @@
                     <div>
                         <img src="images/TrialValue.png" alt="TrialValue">
                         <h2>TriallValue</h2>
-                        <p>Lucilius instructior concludaturque vis an, vis efficiendi interesset ex, has summo doming
+                        <p>Lucilius instructior concludaturque vis an, vis efficiendi interesset ex, has summo
+                            doming
                             virtute
                             cu. His ex nostro euismod iudicabit, mei autem petentium deterruisset ea, an sea fugit
                             habemus
@@ -260,7 +299,8 @@
                     <div>
                         <img src="images/iMac%20Cloud%20of%20Experts.png" alt="iMac">
                         <h2>TriallValue</h2>
-                        <p>Lucilius instructior concludaturque vis an, vis efficiendi interesset ex, has summo doming
+                        <p>Lucilius instructior concludaturque vis an, vis efficiendi interesset ex, has summo
+                            doming
                             virtute
                             cu. His ex nostro euismod iudicabit, mei autem petentium deterruisset ea, an sea fugit
                             habemus
@@ -309,7 +349,7 @@
             </div>
         </div>
         <div class="connect">
-                <img src="images/ic_message.svg" alt="message">
+            <img src="images/ic_message.svg" alt="message">
         </div>
         <figure class="chat">
             <header>
@@ -319,7 +359,8 @@
             <figcaption>
                 <img src="images/clients/img_tfront.png" alt="manager">
                 <span class="triangle"></span>
-                <blockquote>Hello, for the best communication, could you provide your name and email, please?</blockquote>
+                <blockquote>Hello, for the best communication, could you provide your name and email, please?
+                </blockquote>
             </figcaption>
             <form action="">
                 <input type="text" placeholder="Name*" required>
@@ -348,6 +389,37 @@
     <figure class="slogan">need some kind of call to action</figure>
     <section class="references">
         <h1>Customer References</h1>
+        <div class="mobile-slider">
+            <ul class="bxslider">
+                <li>
+                    <div class="slider-item">
+                        <img src="images/clients/img_right.png" alt="client1">
+                        <p>“ Creative and personal approach has ensured higher traffic, increased engagement and brand
+                            awareness, helping us to really stand out as a design-led, innovative tile manufacturer.
+                            “</p>
+                        <h2>Etta Harvey, TriallValue</h2>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider-item">
+                        <img src="images/clients/img_tfront.png" alt="client2">
+                        <p>“ Creative and personal approach has ensured higher traffic, increased engagement and brand
+                            awareness, helping us to really stand out as a design-led, innovative tile manufacturer.
+                            “</p>
+                        <h2>Etta Harvey, TriallValue</h2>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider-item">
+                        <img src="images/clients/img_left.png" alt="client3">
+                        <p>“ Creative and personal approach has ensured higher traffic, increased engagement and brand
+                            awareness, helping us to really stand out as a design-led, innovative tile manufacturer.
+                            “</p>
+                        <h2>Etta Harvey, TriallValue</h2>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <div class="slider">
             <div class="dg-container">
                 <div class="dg-wrapper">
