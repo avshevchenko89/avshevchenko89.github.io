@@ -11,7 +11,10 @@ $(function () {
     $('.nav-button').on('click', function () {
         if (!mobNav) {
             $('.menu nav').fadeIn(300);
-            mobNav = true
+            $('.nav-button').css({
+                'background': 'url("../images/menu.svg")'
+            });
+            mobNav = true;
         } else {
             $('.menu nav').fadeOut(300);
             mobNav = false;
@@ -31,7 +34,7 @@ $(function () {
 
     $('.references .bxslider').bxSlider({
         infiniteLoop: true,
-        hideControlOnEnd: true,
+        hideControlOnEnd: true
     });
 
     $('.chat').hide();

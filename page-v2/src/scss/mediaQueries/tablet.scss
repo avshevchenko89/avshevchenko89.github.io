@@ -13,13 +13,22 @@
 
   header {
     height: 100vh;
-    background-position: 25% center; /* значек меню!! */
+    background-position: 25% center;
 
     .menu {
       height: 10vh;
 
+      .logo {
+        left: 45%;
+        position: relative;
+      }
+
       .nav-button {
         display: block;
+        width: 25px;
+        height: 25px;
+        background: url("../../images/menu_white.svg") no-repeat center;
+        background-size: cover;
         cursor: pointer;
         z-index: 50;
       }
@@ -53,6 +62,12 @@
           }
         }
       }
+    }
+
+    .scroll-menu .nav-button {
+      width: 32px;
+      height: 32px;
+      background: url("../../images/menu.svg");
     }
 
     .banner {
@@ -124,43 +139,35 @@
     }
   }
 
-  .technologies { /* !! */
-    height: 100vh;
+  .technologies {
+    height: inherit;
 
-    div {
-      width: 90%;
-      height: 65vh;
-      margin: 0 auto;
+    .mobile-desktop {
+      display: none;
+    }
+
+    .tablet-technologies {
+      display: block;
+      width: 100%;
 
       .row {
-        display: flex;
-        justify-content: space-around;
-        align-items: baseline;
-        flex-wrap: wrap;
+        text-align: center;
 
         img {
-          margin-right: 10%;
+          margin-right: 50px;
+          margin-bottom: 50px;
+
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
 
-      .first {
-        width: 100%;
-        padding-right: 0;
-      }
-
-      .second {
-        width: 95%;
-        padding-right: 0;
-      }
-
-      .third {
-        width: 50%;
-      }
     }
   }
 
   .areas {
-     & > div {
+    & > div {
       .row div {
         width: 15%;
       }
@@ -179,11 +186,14 @@
     }
   }
 
-  .portfolio {  
-    min-height: 760px;
-    height: 100vh;
+  .portfolio {
+    height: inherit;
+    padding-bottom: 10vh;
 
     .slider {
+      height: 85vh;
+      min-height: 695px;
+
       .dg-container .dg-wrapper {
         width: 75%;
       }
@@ -233,8 +243,8 @@
   .references {
     .slider {
       .dg-wrapper {
-      width: 70%;
-    }
+        width: 70%;
+      }
       nav {
         width: 86%;
         bottom: 30vh;
