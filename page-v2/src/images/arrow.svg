@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="28px" viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-897.000000, -1913.000000)" fill="#5CA0DF">
+            <g id="work-process" transform="translate(0.000000, 1664.000000)">
+                <g id="implementation" transform="translate(722.000000, 208.000000)">
+                    <g id="Group-2" transform="translate(185.000000, 55.000000) rotate(90.000000) translate(-185.000000, -55.000000) translate(171.000000, 45.000000)">
+                        <polygon id="arrow" transform="translate(5.000000, 10.000000) scale(-1, 1) translate(-5.000000, -10.000000) " points="0 2.73014946 7.39138867 10.1533518 0.232738557 17.3380069 0.190069822 20 10 10.1533518 0 0"></polygon>
+                        <polygon id="arrow" points="18 2.73014946 25.3913887 10.1533518 18.2327386 17.3380069 18.1900698 20 28 10.1533518 18 0"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

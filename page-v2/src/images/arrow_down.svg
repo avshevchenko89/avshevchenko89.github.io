@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="22px" viewBox="0 0 21 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-687.000000, -1916.000000)" fill="#5CA0DF">
+            <g id="work-process" transform="translate(0.000000, 1664.000000)">
+                <g id="ui/ux" transform="translate(514.000000, 208.000000)">
+                    <g id="arrow" transform="translate(183.500000, 55.000000) rotate(90.000000) translate(-183.500000, -55.000000) translate(172.000000, 44.000000)">
+                        <polygon transform="translate(6.000000, 11.000000) rotate(1.000000) translate(-6.000000, -11.000000) " points="1 3.73014946 8.39138867 11.1533518 1.23273856 18.3380069 1.19006982 21 11 11.1533518 1 1"></polygon>
+                        <polygon transform="translate(17.000000, 11.000000) rotate(1.000000) translate(-17.000000, -11.000000) " points="12 3.73014946 19.3913887 11.1533518 12.2327386 18.3380069 12.1900698 21 22 11.1533518 12 1"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
