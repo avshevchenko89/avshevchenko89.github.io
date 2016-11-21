@@ -1,0 +1,34 @@
+.add {
+    width: 30%;
+    position: absolute;
+    left: 30%;
+    top: 8em;
+    border: 1px solid #999;
+    box-shadow: -3px 3px 5px #999;
+    z-index: 10;
+}
+
+.add select {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.space {
+    flex: 1 1 auto;
+}
+
+.name {
+    cursor: pointer;
+}
+
+.department-name {
+    color: #999;
+}
+
+@media (max-width: 667px) {
+    .add {
+        width: 80%;
+        left: 5%;
+        top: 10em;
+    }
+}

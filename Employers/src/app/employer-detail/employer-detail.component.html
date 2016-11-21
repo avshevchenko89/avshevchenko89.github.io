@@ -1,0 +1,23 @@
+<md-card *ngIf="employer">
+    <md-card-title>{{employer.firstName}} {{employer.lastName}}</md-card-title>
+    <md-card-content>
+        <div>
+            <md-input value="{{employer.firstName}}" placeholder="First name" disabled></md-input>
+        </div>
+        <div>
+            <md-input value="{{employer.lastName}}" placeholder="Last name" disabled></md-input>
+        </div>
+        <div>
+            <md-input value="{{employer.phone}}" placeholder="Phone" disabled></md-input>
+        </div>
+        <div>
+            <md-input value="{{employer.salary}}" placeholder="Salary" disabled></md-input>
+        </div>
+        <div>
+            <md-input value="{{employer.departmentName}}" placeholder="Department" disabled></md-input>
+        </div>
+    </md-card-content>
+    <md-card-actions>
+        <button md-button (click)="goBack()">Back</button>
+    </md-card-actions>
+</md-card>

@@ -1,0 +1,103 @@
+<md-card class="add" *ngIf="addClicked">
+    <md-toolbar color="primary">
+        <span>New employer form</span>
+        <span class="space"></span>
+        <button md-mini-fab (click)="close()">
+            <md-icon class="md-18">clear</md-icon>
+        </button>
+    </md-toolbar>
+
+    <form (ngSubmit)="onSubmit()" #employerForm="ngForm">
+        <md-input dividerColor="warn"
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First name:"
+                  required
+                  [(ngModel)]="model.firstName"
+                  #firstName="ngModel">
+        </md-input>
+        <md-input dividerColor="warn"
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last name:"
+                  required
+                  [(ngModel)]="model.lastName"
+                  #lastName="ngModel">
+        </md-input>
+        <md-input dividerColor="accent"
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone:"
+                  [(ngModel)]="model.phone"
+                  #phone="ngModel">
+        </md-input>
+        <md-input dividerColor="accent"
+                  type="text"
+                  class="form-control"
+                  id="salary"
+                  name="salary"
+                  placeholder="Salary:"
+                  [(ngModel)]="model.salary"
+                  #salary="ngModel">
+        </md-input>
+        <div>
+        <label for="departmentId">Department name:</label>
+        <select name="departmentId"
+                id="departmentId"
+                required
+                [(ngModel)]="model.departmentId"
+                #departmentName="ngModel">
+            <option *ngFor="let department of departments"
+                    [value]="department.id">
+                {{department.name}}
+            </option>
+        </select>
+        </div>
+        <button md-raised-button type="submit" class="submit-btn" [disabled]="!employerForm.form.valid">Add
+        </button>
+    </form>
+</md-card>
+
+<md-card>
+    <md-card-title>{{title}}</md-card-title>
+    <md-card-subtitle>
+        <label for="departmentSelect">Select department: </label>
+        <select name="departmentSelect"
+                id="departmentSelect"
+                [(ngModel)]="departmentId"
+                (change)="onChange($event.target.value)">
+            <option value="" selected>All</option>
+            <option *ngFor="let department of departments"
+                    [value]="department.id">
+                {{department.name}}
+            </option>
+        </select>
+    </md-card-subtitle>
+    <md-card-content>
+        <button md-mini-fab (click)="addEmpl()">
+            <md-icon class="md-24">add</md-icon>
+        </button>
+        <md-list>
+            <md-list-item *ngFor="let employer of employers | department:departmentId"
+                          (click)="gotoDetail(employer)">
+                <h3 class="name" md-line>{{employer.firstName}} {{employer.lastName}}</h3>
+
+                <p md-line class="department-name">{{employer.departmentName}}</p>
+                <button md-mini-fab (click)="delete(employer); $event.stopPropagation()">
+                    <md-icon class="md-24">delete</md-icon>
+                </button>
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+    <md-card-actions>
+        <button md-button (click)="goBack()">
+            Back
+        </button>
+    </md-card-actions>
+</md-card>

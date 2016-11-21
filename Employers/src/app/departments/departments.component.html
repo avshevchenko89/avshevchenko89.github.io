@@ -1,0 +1,36 @@
+<md-card>
+    <md-card-title>{{title}}</md-card-title>
+    <md-card-content>
+        <form #departmentForm="ngForm" (ngSubmit)="onSubmit()">
+            <md-input name="name"
+                      id="name"
+                      required
+                      placeholder="Department name:"
+                      [(ngModel)]="model.name"
+                      #name="ngModel">
+            </md-input>
+            <md-input name="description"
+                      id="description"
+                      placeholder="Department description:"
+                      [(ngModel)]="model.description"
+                      #description="ngModel"></md-input>
+            <button type="submit" md-mini-fab [disabled]="!departmentForm.form.valid">
+                <md-icon class="md-24">add</md-icon>
+            </button>
+        </form>
+        <md-list>
+            <md-list-item
+                    *ngFor="let department of departments">
+                <app-department
+                        [department]="department"
+                        (deleteSelected)="delete($event)"
+                        class="dep"></app-department>
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+    <md-card-actions>
+        <button md-button (click)="goBack()">
+            Back
+        </button>
+    </md-card-actions>
+</md-card>
