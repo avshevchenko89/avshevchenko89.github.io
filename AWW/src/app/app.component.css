@@ -1,0 +1,27 @@
+header {
+    width: 100%;
+    min-height: 80px;
+}
+
+.header-nav {
+    background-color: #028fcc;
+    z-index: 100;
+}
+
+.navbar-brand {
+    display: block;
+}
+
+.navbar-right li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li a:focus {
+    background: #0273A3;
+}

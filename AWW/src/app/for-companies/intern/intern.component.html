@@ -1,0 +1,29 @@
+<div class="col-md-1 col-sm-1">
+  <p class="text-center">{{num+1}}</p>
+</div>
+<div class="col-md-2 col-sm-2">
+  <p class="text-center">{{intern.firstName}} {{intern.lastName}}</p>
+</div>
+<div class="col-md-2 col-sm-2">
+  <p class="text-center"><i class="fa fa-map-marker" aria-hidden="true"></i> {{intern.city}}</p>
+</div>
+<div class="col-md-1 col-sm-1">
+  <p class="text-center">{{intern.availableHours}}h</p>
+</div>
+<div class="col-md-1 col-sm-1">
+  <p class="text-center">{{intern.hourlyRate}}<i class="fa fa-usd" aria-hidden="true"></i></p>
+</div>
+<div class="col-md-1 col-sm-1 text-center">
+  {{spoken}}
+</div>
+<div class="col-md-2 col-sm-2">
+  <ul class="skills">
+    <li *ngFor="let skill of intern.skills">{{skill}}</li>
+  </ul>
+</div>
+<div class="col-md-1 col-sm-1">
+  <p class="text-center"><i class="fa fa-{{intern.gender}}" aria-hidden="true"></i></p>
+</div>
+<div class="col-md-1 col-sm-1 text-center">
+  <a href="{{intern.socialLink}}"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>

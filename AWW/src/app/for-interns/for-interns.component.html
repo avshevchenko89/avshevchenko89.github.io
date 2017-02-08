@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <h1 class="text-center">
+    {{title}}
+  </h1>
+  <div class="container">
+    <h3 class="text-center">
+      Job list
+    </h3>
+    <div class="row">
+      <ul class="jobs list-unstyled">
+        <li *ngFor="let job of jobs">
+          <app-job [job]="job"></app-job>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

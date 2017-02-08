@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-1 job-list-logo">
+    <img src="images/bt-logo-blue.png" class="img-responsive"
+         alt="company-logo"/>
+  </div>
+
+  <div class="col-md-5 job-list-desc">
+    <h6>{{job.title}}</h6>
+    <p>{{job.description}}</p>
+  </div>
+
+  <div class="col-md-2 job-list-location">
+    <h6><i class="fa fa-map-marker"></i>{{job.location}}</h6>
+    <p class="bookmark">{{job.locationBookmark}}</p>
+  </div>
+
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-7 job-list-type">
+        <h6><i class="fa fa-user"></i>{{job.type}}</h6>
+      </div>
+      <div class="col-md-5 job-list-button">
+        <button class="btn-view-job" (click)="goToDetail(job)">View Job</button>
+      </div>
+    </div>
+  </div>
+</div>

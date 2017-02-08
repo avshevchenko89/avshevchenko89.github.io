@@ -1,0 +1,73 @@
+<div *ngIf="job">
+  <div class="main-page-title">
+    <div class="container">
+      <input class="job-detail-title form-control" name="title" [(ngModel)]="job.title">
+      <img src="images/bt-logo-blue.png" class="img-responsive job-detail-logo" alt="company-logo"/>
+      <ul class="meta-job-detail">
+        <li><i class="fa fa-link"></i><a href="http://bt4.azurewebsites.net/">Website</a></li>
+        <li>
+          <i class="fa fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/alexander-litvinov-31a618132">Linkedin</a></li>
+      </ul>
+      <div class="recent-job-detail">
+        <div class="col-md-4 job-detail-desc">
+          <textarea name="description"
+                    cols="50"
+                    rows="5"
+                    class="form-control"
+                    [(ngModel)]="job.description"></textarea>
+        </div>
+        <div class="col-md-3 job-detail-location">
+          <input type="text"
+                 name="location"
+                 class="form-control"
+                 [(ngModel)]="job.location">
+          <textarea type="text"
+                    cols="25"
+                    rows="3"
+                    class="bookmark form-control"
+                    name="bookmark"
+                    [(ngModel)]="job.locationBookmark"></textarea>
+          <!--<h6><i class="fa fa-map-marker"></i>{{job.location}}</h6>
+          <p class="bookmark">{{job.locationBookmark}}</p>-->
+        </div>
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-md-6 job-detail-type">
+              <select name="type"
+                      id="type"
+                      class="form-control"
+                      [(ngModel)]="job.type">
+                <option value="{{job.type}}">{{job.type}}</option>
+                <option value="Contract Full Time">Contract Full Time</option>
+                <option value="Freelance">Freelance</option>
+              </select>
+            </div>
+            <div class="col-md-3 job-detail-button">
+              <button class="btn-apply-job" (click)="save()">Save</button>
+            </div>
+            <div class="col-md-3 job-detail-button">
+              <button class="btn-apply-job" (click)="delete()">Delete</button>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container job-detail">
+    <div class="spacer-1">&nbsp;</div>
+    <h6>Required skills:</h6>
+    <div>
+      <ul class="style-list-2">
+        <div class="row">
+          <li *ngFor="let skill of job.requiredSkills" class="col-md-6">
+            {{skill}}
+          </li>
+        </div>
+      </ul>
+    </div>
+    <div class="spacer-1">&nbsp;</div>
+  </div>
+</div>

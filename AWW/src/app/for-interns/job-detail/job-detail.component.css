@@ -1,0 +1,149 @@
+.job-detail-title {
+    display: block;
+    font-weight: 700;
+    margin: 45px 0;
+    color: #565656;
+}
+
+.job-detail-logo {
+    float: left;
+    margin: -30px 10px 0 0;
+    width: 150px;
+}
+
+.meta-job-detail {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.meta-job-detail li {
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    color: #565656;
+}
+
+.meta-job-detail a {
+    color: #565656;
+    font-family: 'Raleway', myriad pro, tahoma, sans-serif;
+}
+
+.meta-job-detail a:hover {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+.meta-job-detail li i {
+    margin: 0 10px 0 0;
+    color: #565656;
+}
+
+.job-detail h6 {
+    font-family: 'Raleway', myriad pro, tahoma, sans-serif;
+    font-size: 18px;
+    color: #565656;
+    text-transform: uppercase;
+}
+
+.job-detail p {
+    font-family: 'nunito', myriad pro, tahoma, sans-serif;
+    font-size: 14px;
+    color: #565656;
+    font-weight: 300;
+}
+
+.recent-job-detail {
+    width: 100%;
+    border-bottom: 1px solid #dadedf;
+    border-top: 1px solid #dadedf;
+    padding: 20px 0;
+    margin: 50px 0 0 0;
+}
+
+.job-detail-name {
+    min-height: 65px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.job-detail-name h6 {
+    font-family: 'Raleway', myriad pro, tahoma, sans-serif;
+}
+
+.job-detail-desc {
+    min-height: 65px;
+    font-family: 'Raleway', myriad pro, tahoma, sans-serif;
+}
+
+.job-detail-desc h5 {
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    color: #565656;
+    font-family: 'Raleway', myriad pro, tahoma, sans-serif;
+}
+
+.job-detail-desc p {
+    color: #565656;
+    font-size: 14px;
+    padding: 0;
+}
+
+.job-detail-location {
+    min-height: 65px;
+    text-align: center;
+    font-family: 'Raleway', myriad pro, tahoma, sans-serif;
+}
+
+.bookmark {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+.job-detail-type {
+    min-height: 65px;
+    text-align: center;
+}
+
+.job-detail-button {
+    min-height: 65px;
+    font-family: 'Raleway', myriad pro, tahoma, sans-serif;
+}
+
+.job-detail-location h6, .job-detail-type h6 {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: #565656;
+    font-family: 'Raleway', myriad pro, tahoma, sans-serif;
+}
+
+.job-detail-location h6 i {
+    color: #27a2f8;
+    margin: 0 10px 0 0;
+
+}
+
+.job-detail-type h6 i {
+    color: #ff9494;
+    margin: 0 10px 0 0;
+
+}
+
+.job-list-logo, .job-list-desc, .job-list-location, .job-list-type {
+    margin: 5px 0;
+}
+
+.btn-apply-job {
+    background: #028fcc;
+    padding: 5px 30px;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.btn-apply-job:hover {
+    background: #fff;
+    color: #028fcc;
+}

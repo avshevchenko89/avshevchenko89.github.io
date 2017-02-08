@@ -1,0 +1,105 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #565656;
+}
+
+a {
+  color: #565656;
+}
+
+a:hover {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+hr {
+  margin: 0;
+}
+
+/*.style-list-1 {
+  list-style-image: url(images/list-1.png);
+  margin: 15px 0;
+  padding: 0 0 0 15px;
+  font-size: 14px;
+  color: #7f7f7f;
+}
+
+.style-list-2 {
+  list-style-image: url(images/list-2.png);
+  margin: 15px 0;
+  padding: 0 0 0 15px;
+  font-size: 14px;
+  color: #7f7f7f;
+}
+
+.style-list-3 {
+  list-style-image: url(images/list-3.png);
+  margin: 15px 5px;
+  padding: 0 0 0 15px;
+  font-size: 14px;
+  color: #7f7f7f;
+}*/
+
+/*.style-list-4 {
+  list-style-image: url(images/list-4.png);
+  margin: 15px 5px;
+  padding: 0 0 0 15px;
+  font-size: 14px;
+  color: #7f7f7f;
+}*/
+
+.style-list-3 a, .style-list-4 a {
+  color: #7f7f7f;
+}
+
+.style-list-3 a:hover, .style-list-4 a:hover {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+.style-list-1 li {
+  margin: 0 0 5px 0;
+}
+
+.style-list-2 li {
+  margin: 0 0 25px 0;
+}
+
+.style-list-3 li {
+  margin: 0 0 9px 0;
+}
+
+.style-list-4 li {
+  margin: 0 0 9px 0;
+}

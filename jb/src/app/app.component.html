@@ -1,0 +1,27 @@
+<header>
+  <div class="header-nav navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://bt4.azurewebsites.net/">
+                        <span>
+                            <img class="img-responsive" src="images/bt-logo.png" alt="logo">
+                        </span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a (click)="goHome()">HOME</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

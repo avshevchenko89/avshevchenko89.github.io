@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <h2 class="text-center">{{title}}</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 col-sm-1"></div>
+            <div class="col-md-2 col-sm-2">
+                <h6 class="text-center">Name</h6>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <h6 class="text-center">Location</h6>
+            </div>
+            <div class="col-md-1 col-sm-1">
+                <h6 class="text-center">Available hours</h6>
+            </div>
+            <div class="col-md-1 col-sm-1">
+                <h6 class="text-center">Hourly rate</h6>
+            </div>
+            <div class="col-md-1 col-sm-1">
+                <h6 class="text-center">English speaking</h6>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <h6 class="text-center">Skills</h6>
+            </div>
+            <div class="col-md-1 col-sm-1">
+                <h6 class="text-center">Gender</h6>
+            </div>
+            <div class="col-md-1 col-sm-1">
+                <h6 class="text-center">Social link</h6>
+            </div>
+        </div>
+        <div class="row" *ngFor="let intern of interns; let num = index">
+            <app-intern [intern]="intern" [num]="num"></app-intern>
+        </div>
+    </div>
+    <div class="container map">
+        <app-map></app-map>
+    </div>
+</div>
+<footer></footer>
+

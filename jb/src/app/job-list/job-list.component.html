@@ -1,0 +1,115 @@
+<section class="recent-job">
+  <div class="add container" *ngIf="addForm">
+    <i class="fa fa-times close" (click)="close()"></i>
+    <form (ngSubmit)="next()" #jobForm="ngForm" *ngIf="!nextSelected">
+      <div>
+        <label for="title">Title:</label>
+        <input type="text"
+               class="form-control"
+               id="title"
+               name="title"
+               required
+               autocomplete="on"
+               [(ngModel)]="model.title"
+               #title="ngModel">
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea class="form-control"
+                  id="description"
+                  name="description"
+                  [(ngModel)]="model.description"
+                  #description="ngModel"></textarea>
+      </div>
+      <div>
+        <label for="location">Location:</label>
+        <input type="text"
+               class="form-control"
+               id="location"
+               name="location"
+               required
+               autocomplete="on"
+               [(ngModel)]="model.location"
+               #location="ngModel">
+      </div>
+      <div>
+        <label for="bookmark">Location bookmark</label>
+        <input type="text"
+               class="form-control"
+               id="bookmark"
+               name="locationBookmark"
+               autocomplete="on"
+               [(ngModel)]="model.locationBookmark"
+               #locationBookmark="ngModel">
+      </div>
+      <div>
+        <label for="type">Type:</label>
+        <select name="type"
+                id="type"
+                class="form-control"
+                required
+                [(ngModel)]="model.type"
+                #type="ngModel">
+          <option value="Contract Full Time">Contract Full Time</option>
+          <option value="Freelance">Freelance</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-apply-job" [disabled]="!jobForm.form.valid">Next</button>
+    </form>
+    <form (ngSubmit)="onSubmit()" #jobReq="ngForm" *ngIf="nextSelected">
+      <h5>Requirements</h5>
+      <div>
+        <input type="text"
+               name="requiredSkill"
+               placeholder="Add require"
+                [(ngModel)]="requiredSkill">
+        <i class="fa fa-plus-circle" (click)="addReq()"></i>
+      </div>
+      <ul>
+        <li *ngFor="let requirement of model.requiredSkills">
+          {{requirement}}
+        </li>
+      </ul>
+      <button type="submit" class="btn btn-apply-job">Add</button>
+    </form>
+  </div>
+  <div class="container-fluid">
+    <h4>{{title}} <i class="fa fa-plus-square add-btn" (click)="add()"></i></h4>
+    <div class="container-fluid">
+      <ul class="jobs">
+        <li *ngFor="let job of jobs">
+          <div class="row">
+            <div class="col-md-1 job-list-logo">
+              <img src="images/bt-logo-blue.png" class="img-responsive"
+                   alt="company-logo"/>
+            </div>
+
+            <div class="col-md-4 job-list-desc">
+              <h6>{{job.title}}</h6>
+              <p>{{job.description}}</p>
+            </div>
+
+            <div class="col-md-2 job-list-location">
+              <h6><i class="fa fa-map-marker"></i>{{job.location}}</h6>
+              <p class="bookmark">{{job.locationBookmark}}</p>
+            </div>
+
+            <div class="col-md-5">
+              <div class="row">
+                <div class="col-md-6 job-list-type">
+                  <h6><i class="fa fa-user"></i>{{job.type}}</h6>
+                </div>
+                <div class="col-md-3 job-list-button">
+                  <button class="btn-view-job" (click)="gotoDetail(job)">View Job</button>
+                </div>
+                <div class="col-md-3 job-list-button">
+                  <button class="btn-view-job" (click)="delete(job)">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
