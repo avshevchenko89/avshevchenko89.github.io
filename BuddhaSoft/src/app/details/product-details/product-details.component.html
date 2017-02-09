@@ -1,0 +1,67 @@
+<main>
+  <div class="container" *ngIf="product">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-7 col-sm-7">
+              <div class="page-header">
+                <h2 *ngIf="!editMode">
+                  {{product.productTitle}}
+                  <span class="glyphicon glyphicon-pencil"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Edit"
+                        (click)="edit()"></span>
+                </h2>
+                <input *ngIf="editMode"
+                       class="form-control"
+                       [(ngModel)]="product.productTitle"
+                       placeholder="Product name">
+              </div>
+              <h4 class="price"
+                  *ngIf="!editMode">
+                Price: <i class="glyphicon glyphicon-usd"></i>{{product.price}}
+              </h4>
+              <h4 class="price"
+                  *ngIf="editMode">
+                Price:
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input [(ngModel)]="product.price"
+                         class="form-control">
+                </div>
+              </h4>
+              <p class="description"
+                 *ngIf="!editMode">
+                {{product.description}}
+              </p>
+              <textarea *ngIf="editMode"
+                        name="description"
+                        id="description"
+                        cols="30"
+                        rows="8"
+                        class="form-control"
+                        placeholder="Description"
+                        [(ngModel)]="product.description"></textarea>
+              <button *ngIf="!editMode"
+                      type="button"
+                      class="btn btn-primary"
+                      (click)="goBack()">Back</button>
+              <button
+                *ngIf="editMode"
+                type="submit"
+                class="btn btn-info save-btn"
+                (click)="save()">Save</button>
+            </div>
+            <div class="col-md-5 col-sm-5">
+              <div class="panel panel-default product-img">
+                <img src="{{product.image}}" alt="{{product.productTitle}}" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

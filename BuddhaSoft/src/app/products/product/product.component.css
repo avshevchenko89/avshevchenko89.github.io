@@ -1,0 +1,9 @@
+.panel {
+  cursor: pointer;
+  color: #5c62d5;
+}
+
+.panel:hover {
+  box-shadow: inset 3px 3px 6px #afafaf;
+  font-weight: 600;
+}

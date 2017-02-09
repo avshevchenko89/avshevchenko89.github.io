@@ -1,0 +1,25 @@
+.page-header span {
+  color: #4fa6d5;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.price {
+  color: #5c62d5;
+}
+
+.price i {
+  font-size: 14px;
+}
+
+.description {
+  margin: 30px auto;
+}
+
+.product-img {
+  padding: 20px;
+}
+
+.save-btn {
+  margin-top: 20px;
+}

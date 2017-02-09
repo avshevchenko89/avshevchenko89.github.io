@@ -1,0 +1,9 @@
+<div
+  class="panel panel-default"
+  *ngIf="product">
+  <div class="panel-body">
+    <span (click)="showDetails()">{{product.productTitle}}</span>
+    <!--<span class="glyphicon glyphicon-pencil"></span>-->
+    <span class="glyphicon glyphicon-remove close" (click)="delete(product)"></span>
+  </div>
+</div>
