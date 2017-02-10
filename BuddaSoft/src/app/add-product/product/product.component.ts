@@ -23,9 +23,7 @@ export class ProductComponent implements OnInit {
   }
 
   fileChange(event) {
-    let eventObj: MSInputMethodContext = <MSInputMethodContext> event;
-    let target: HTMLInputElement = <HTMLInputElement> eventObj.target;
-    let files: FileList = target.files;
+    let files = event.srcElement.files;
     this.model.image = files[0].name;
   }
 
