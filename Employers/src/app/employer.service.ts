@@ -11,7 +11,7 @@ export class EmployerService {
 
     private headers = new Headers({'Content-Type': 'application/json'});
 
-    private employersUrl = 'https://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/employees';
+    private employersUrl = 'http://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/employees';
 
     constructor(private http:Http) {
     }

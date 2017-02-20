@@ -10,7 +10,7 @@ import { Department } from './department';
 export class DepartmentService {
     private headers = new Headers({'Content-Type': 'application/json'});
 
-    private departmentUrl = 'https://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/departments';
+    private departmentUrl = 'http://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/departments';
 
     constructor(private http:Http) {
     }

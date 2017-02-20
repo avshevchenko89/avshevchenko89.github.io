@@ -7,6 +7,7 @@ import { DepartmentsComponent } from './departments.component';
 import { DepartmentComponent } from './department/department.component';
 
 import { DepartmentService } from '.././department.service';
+import { DepartmentEmployersComponent } from './department-employers/department-employers.component';
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { DepartmentService } from '.././department.service';
     ],
     declarations: [
         DepartmentsComponent,
-        DepartmentComponent
+        DepartmentComponent,
+        DepartmentEmployersComponent
     ],
     providers: [
         DepartmentService
