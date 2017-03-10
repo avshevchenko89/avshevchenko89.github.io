@@ -1,0 +1,36 @@
+@import "palette";
+
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+a,
+body,
+header,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: @color3;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.clearfix::after {
+  display: block;
+  content: '';
+}
