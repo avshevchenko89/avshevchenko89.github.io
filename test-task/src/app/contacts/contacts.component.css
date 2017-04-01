@@ -1,0 +1,55 @@
+.controls {
+  margin-bottom: 20px;
+}
+
+.controls button {
+  margin-right: 10px;
+}
+
+.user-list .container-fluid {
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+}
+
+.user-list .header {
+  cursor: default;
+}
+
+.user-list tr {
+  cursor: pointer;
+}
+
+.sidebar {
+  min-height: 100vh;
+  height: auto;
+}
+
+.title {
+  margin: 30px 0;
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+}
+
+.new-modal {
+  min-width: 300px;
+  width: 50%;
+  position: absolute;
+  top: 10px;
+  left: 15%;
+  box-shadow: 4px 4px 4px #eee;
+}
+
+.new-modal h3 {
+  display: inline-block;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}

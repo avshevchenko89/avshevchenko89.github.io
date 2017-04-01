@@ -1,0 +1,40 @@
+<nav class="navbar navbar-toggleable-xs navbar-inverse hidden-lg-up hidden-md-up hidden-sm-up fixed-top bg-primary">
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <span class="navbar-brand">Test task</span>
+
+    <div class="navbar-collapse collapse" id="navbars" aria-expanded="false">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/contacts" routerLinkActive="active">Contacts <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/groups" routerLinkActive="active">Groups</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/clock" routerLinkActive="active">Clock</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contacts" routerLinkActive="active">Contacts <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/groups" routerLinkActive="active">Groups</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/clock" routerLinkActive="active">Clock</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 col-xs-12">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>

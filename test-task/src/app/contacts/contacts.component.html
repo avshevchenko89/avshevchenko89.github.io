@@ -1,0 +1,233 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-md-9 col-sm-12 mt-3">
+      <div class="row controls">
+        <button
+          type="button"
+          class="btn btn-outline-success"
+          (click)="newUserForm()">Create
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-info"
+          [disabled]="!selectedUser"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Select user to edit"
+          (click)="editClicked = true">Edit</button>
+        <button
+          type="button"
+          class="btn btn-outline-danger"
+          [disabled]="!selectedUser"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Select user to delete"
+          (click)="deleteSelected()">Delete</button>
+      </div>
+      <div class="row user-list">
+        <div class="container-fluid">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+              <thead>
+              <tr class="header">
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Group</th>
+                <th>Description</th>
+                <th>Note</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let user of users" (click)="onSelect(user)" data-toggle="tooltip" data-placement="bottom"
+                  title="Click to select">
+                <td>{{user.name}}</td>
+                <td>{{user.surname}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.group}}</td>
+                <td>{{user.description}}</td>
+                <td>{{user.note}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-md-3 col-sm-12 sidebar card" *ngIf="selectedUser">
+      <div *ngIf="!editClicked">
+        <h4>
+          <small>Contact card</small>
+        </h4>
+        <h2 class="text-capitalize title">{{selectedUser.name}} {{selectedUser.surname}}</h2>
+        <ul class="list-unstyled">
+          <li>age: {{selectedUser.age}}</li>
+          <li>group: {{selectedUser.group}}</li>
+          <li>description: {{selectedUser.description}}</li>
+          <li>note: {{selectedUser.note}}</li>
+        </ul>
+      </div>
+      <div *ngIf="editClicked">
+        <h4>
+          <small>Contact card</small>
+        </h4>
+        <div class="form-group">
+          <label>name:</label>
+          <input type="text" class="form-control" [(ngModel)]="selectedUser.name" placeholder="name">
+        </div>
+        <div class="form-group">
+          <label>surname:</label>
+          <input type="text" class="form-control" [(ngModel)]="selectedUser.surname" placeholder="surname">
+        </div>
+        <div class="form-group">
+          <label>age:</label>
+          <input type="number" class="form-control" [(ngModel)]="selectedUser.age" placeholder="age">
+        </div>
+        <div class="form-group">
+          <label>group:</label>
+          <select [(ngModel)]="selectedUser.group" class="form-control">
+            <option
+              *ngFor="let group of groups"
+              [value]="group.name">
+              {{group.name}}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>description:</label>
+          <input type="text" class="form-control" [(ngModel)]="selectedUser.description" placeholder="description">
+        </div>
+        <div class="form-group">
+          <label>note:</label>
+          <input type="text" class="form-control" [(ngModel)]="selectedUser.note" placeholder="note">
+        </div>
+        <button type="button" class="btn btn-success" (click)="saveChanges()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- New User Modal-->
+<div class="card new-modal " *ngIf="createClicked">
+  <div class="card-block">
+    <div class="card-title">
+      <h3>Create new user</h3>
+      <button type="button" class="close"><span aria-hidden="true" (click)="createClicked = false">&times;</span>
+      </button>
+    </div>
+    <form #addUserForm="ngForm" (ngSubmit)="addNewUser()">
+      <div class="form-group">
+
+        <label>First name</label>
+
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          placeholder="User name"
+          required
+          minlength="3"
+          [(ngModel)]="newUser.name"
+          #name="ngModel">
+
+        <div *ngIf="name.errors && (name.dirty || name.touched)"
+             class="alert alert-danger">
+          <div [hidden]="!name.errors.required">
+            First name is required
+          </div>
+          <div [hidden]="!name.errors.minlength">
+            First name must be at least 3 characters long.
+          </div>
+        </div>
+
+      </div>
+      <div class="form-group">
+
+        <label>Last Name</label>
+
+        <input
+          type="text"
+          name="surname"
+          class="form-control"
+          placeholder="User lastname"
+          minlength="3"
+          required
+          [(ngModel)]="newUser.surname"
+          #surname="ngModel">
+
+        <div *ngIf="surname.errors && (surname.dirty || surname.touched)"
+             class="alert alert-danger">
+          <div [hidden]="!surname.errors.required">
+            Last name is required
+          </div>
+          <div [hidden]="!surname.errors.minlength">
+            Last name must be at least 3 characters long.
+          </div>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+
+        <input
+          type="number"
+          name="age"
+          class="form-control"
+          placeholder="User age"
+          [(ngModel)]="newUser.age"
+          #age="ngModel">
+
+      </div>
+      <div class="form-group">
+
+        <label>Group</label>
+
+        <select
+          name="group"
+          id="group"
+          class="form-control"
+          required
+          [(ngModel)]="newUser.group"
+          #group="ngModel">
+
+          <option
+            *ngFor="let group of groups"
+            [value]="group.name">
+            {{group.name}}
+          </option>
+
+        </select>
+      </div>
+      <div class="form-group">
+
+        <label>Description</label>
+
+        <input
+          rows="2"
+          name="description"
+          class="form-control"
+          placeholder="Description"
+          [(ngModel)]="newUser.description"
+          #description="ngModel">
+
+      </div>
+      <div class="form-group">
+
+        <label>Note</label>
+
+        <input
+          type="text"
+          name="note"
+          class="form-control"
+          placeholder="Note"
+          [(ngModel)]="newUser.note"
+          #note="ngModel">
+
+      </div>
+      <button
+        type="submit"
+        class="btn btn-success" [disabled]="!addUserForm.form.valid">Create
+      </button>
+    </form>
+  </div>
+</div>

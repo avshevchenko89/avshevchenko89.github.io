@@ -1,0 +1,129 @@
+<div class="container">
+  <div class="row controls mt-3 mb-3">
+    <button
+      type="button"
+      class="btn btn-outline-success"
+      (click)="newGroupForm()">Create
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-info"
+      [disabled]="!selectedGroup"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="Select group to edit"
+      (click)="editClicked = true">Edit
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-danger"
+      [disabled]="!selectedGroup || selectedGroup.members.length != 0"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="Select empty group to delete"
+      (click)="deleteSelected()">Delete
+    </button>
+  </div>
+  <div class="row">
+    <div
+      *ngFor="let group of groups"
+      class="card">
+      <div class="card-header justify-content-between" (click)="groupSelected(group)" [class.selected]="group === selectedGroup">
+        <h5 class="text-capitalize">{{group.name}}</h5>
+        <span class="badge badge-default badge-pill">{{group.members.length}}</span>
+      </div>
+      <div class="card-block members" [class.visible]="(group === selectedGroup) && (selectedGroup.members.length !== 0)">
+        <ul class="list-unstyled mb-0">
+          <li *ngFor="let member of group.members">{{member.name}} {{member.surname}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card new-modal " *ngIf="createClicked">
+  <div class="card-block">
+    <div class="card-title">
+      <h5>Create new group</h5>
+      <button type="button" class="close"><span aria-hidden="true" (click)="createClicked = false">&times;</span>
+      </button>
+    </div>
+    <form #addGroupForm="ngForm" (ngSubmit)="addNewGroup()">
+      <div class="form-group">
+
+        <label>Group name</label>
+
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          placeholder="Group name"
+          required
+          minlength="3"
+          [(ngModel)]="newGroup.name"
+          #name="ngModel">
+
+        <div *ngIf="name.errors && (name.dirty || name.touched)"
+             class="alert alert-danger">
+          <div [hidden]="!name.errors.required">
+            Group name is required
+          </div>
+          <div [hidden]="!name.errors.minlength">
+            Group name must be at least 3 characters long.
+          </div>
+        </div>
+
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-success" [disabled]="!addGroupForm.form.valid">Create
+      </button>
+    </form>
+  </div>
+</div>
+
+<div class="card new-modal " *ngIf="editClicked">
+  <div class="card-block">
+    <div class="card-title">
+      <h5>Edit group</h5>
+      <button type="button" class="close"><span aria-hidden="true" (click)="editClicked = false">&times;</span>
+      </button>
+    </div>
+    <form #editGroupForm="ngForm" (ngSubmit)="editGroup()">
+      <div class="form-group">
+
+        <label>Group name</label>
+
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          placeholder="Group name"
+          required
+          minlength="3"
+          [(ngModel)]="selectedGroup.name"
+          #name="ngModel">
+
+        <div *ngIf="name.errors && (name.dirty || name.touched)"
+             class="alert alert-danger">
+          <div [hidden]="!name.errors.required">
+            Group name is required
+          </div>
+          <div [hidden]="!name.errors.minlength">
+            Group name must be at least 3 characters long.
+          </div>
+        </div>
+
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-success" [disabled]="!editGroupForm.form.valid">Save
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
